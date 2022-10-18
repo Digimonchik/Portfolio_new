@@ -1,0 +1,42 @@
+@import './Styles/header.scss';
+@import './Styles/about.scss';
+@import './Styles/skills.scss';
+@import './Styles/portfolio.scss';
+@import './Styles/contacts.scss';
+@import './Styles/footer.scss';
+@import './Styles/layout.scss';
+
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 600;
+  font-size: 40px;
+}
+#root{
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  // background-image: url('./Styles/images/gradient_portfolio.webp');
+  // background-size: cover;
+  // background-repeat: no-repeat;
+}
+.page {
+  margin: 0px auto;
+  @include for-extra-small {
+    width: 400px;
+  }
+  @include for-small {
+    width: 640px;
+  }
+  @include for-large {
+    width: 1200px;
+  }
+  // background-image: url('./Styles/images/header_gradient.jpg');
+  // background-size: contain;
+  // background-repeat: no-repeat;
+}
