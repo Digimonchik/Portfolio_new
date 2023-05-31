@@ -1,0 +1,105 @@
+$bodycolor: gray;
+$constructiocolor: gray;
+
+
+.construction {
+
+    &.first-part {
+    height: 3px; 
+    width: 120px; 
+    background: $constructiocolor;
+    }
+
+    &.second-part {
+        height: 180px;
+        width: 3px;
+        background: $constructiocolor;
+        margin-left: 60px;
+    }
+
+    &.third-part {
+        height: 3px;
+        width: 100px;
+        background: $constructiocolor;
+        margin-left: 60px;
+    }
+
+    &.fourth-part {
+           height: 20px;
+            width: 3px;
+            background: $constructiocolor;
+            position: absolute;
+            top: 0;
+            right: 0;
+    }
+}
+
+
+
+
+
+.body-part {
+
+    &.left-hand {
+        width: 50px;
+        height: 3px;
+        background: $bodycolor;
+        position: absolute;
+        top: 50px;
+        right: 3px;
+        rotate: 30deg;
+        transform-origin: right bottom;
+    }
+    &.head {
+        width: 20px;
+        height: 20px;
+        border-radius: 100%;
+        border: 3px solid $bodycolor;
+        position: absolute;
+        top: 20px;
+        right: -9px;
+    }
+    &.right-hand {
+        width: 50px;
+            height: 3px;
+            background: $bodycolor;
+            position: absolute;
+            top: 50px;
+            right: -50px;
+            rotate: -30deg;
+            transform-origin: left bottom;
+    }
+
+    &.body {
+        width: 3px;
+        height: 54px;
+        background: $bodycolor;
+        position: absolute;
+        top: 40px;
+        right: 0;
+    }
+
+    &.left-leg {
+        width: 50px;
+        height: 3px;
+        background: $bodycolor;
+        position: absolute;
+        top: 90px;
+        right: 0;
+        rotate: -60deg;
+        transform-origin: right bottom;
+    }
+    
+    &.right-leg {
+        width: 50px;
+            height: 3px;
+            background: $bodycolor;
+            position: absolute;
+            top: 90px;
+            right: -47px;
+            rotate: 60deg;
+            transform-origin: left bottom;
+    }
+
+
+}

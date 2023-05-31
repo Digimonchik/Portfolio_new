@@ -1,12 +1,12 @@
 @import './skill.scss';
-@import './layout.scss';
+@import './mixins.scss';
 
 .skills {
 
   @include for-large {
     margin-top: 35px;
     width: 100%;
-    height: 350px;
+    min-height: 550px;
     display: flex;
     box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
     flex-direction: column;
@@ -20,7 +20,7 @@
     &__container {
         width: 80%;
         box-sizing: border-box;
-        height: 200px;
+        min-height: 200px;
         display: flex;
         justify-content: space-around;
         align-items: center;

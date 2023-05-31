@@ -1,0 +1,176 @@
+.word-page {
+    min-height: 100vh;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+
+    &__container {
+        position: absolute;
+        top: 20vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__find {
+
+        display: flex;
+        width: 500px;
+        min-height: 100px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+            &_input {
+                width: 350px;
+                height: 40px;
+                &:focus {
+                    border: 1px solid lightgray;
+                }
+            }
+            
+
+            &_button {
+                height: 50px;
+                width: 140px;
+                border: 1px solid gray;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: none;
+                border-radius: 4px;
+                font-size: 12px;
+                cursor: pointer;
+    }
+
+
+    }
+
+    &__transcript {
+        width: 500px;
+        height: 100px;
+  
+        display: flex;
+        flex-direction: row;
+
+            &_word {
+                width: 50%;
+                height: 60px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                font-size: large;
+                font-weight: 400;
+                position: relative;
+                 
+                &::after {
+                    content: "";
+                    position: absolute;
+                    justify-content: center;
+                    bottom: 10px;
+                    width: 150px;
+                    height: 1px;
+                    background-color: gray;
+                }
+                
+            }
+            &_letters {
+                width: 50%;
+                height: 60px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                font-size: large;
+                font-weight: 700;
+                position: relative;
+                
+            }
+    }
+
+    &__definitions {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        width: 500px;
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+
+        &.hiden {
+          display: none;
+        }
+
+        &_definition {
+            margin-left: 40px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            position: relative;
+
+            &::before {
+                content: "";
+                position: absolute;
+                justify-content: center;
+                left: -20px;
+                width: 10px;
+                height: 10px;
+                border-radius: 100%;
+                background-color: gray;
+            } 
+
+        }
+        &_button {
+
+            width: 500px;
+            height: 30px;
+            position: relative;
+            text-align: center;
+            display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+           
+            &.isopen {
+
+              &::after {
+                position: absolute;
+                content:'❬';
+                transform: rotate(270deg);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                top: 0px;
+                font-size: 20px;
+                right: 50px;
+                width: 20px;
+                height: 20px;
+
+              }
+            }
+            &.isclosed {
+                &::after {
+                    position: absolute;
+                    content:'❬';
+                    transform: rotate(90deg);
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    top: 0px;
+                    font-size: 20px;
+                    right: 50px;
+                    width: 20px;
+                    height: 20px;
+                  }
+            }
+        }
+
+    }
+}

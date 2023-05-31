@@ -1,8 +1,9 @@
 .skill {
     @include for-large {
-    width: 100px;
-    height: 100px;
-    transition: width 0.5s, height 0.5s;
+    margin: 30px;
+    width: 120px;
+    height: 120px;
+    transition: width 1s, height 1s;
     &:hover {
         width:150px;
         height: 150px;

@@ -3,11 +3,19 @@
 @import './Styles/skills.scss';
 @import './Styles/portfolio.scss';
 @import './Styles/contacts.scss';
-@import './Styles/footer.scss';
+@import './Styles/curiculum.scss';
+@import './Styles/mixins.scss';
 @import './Styles/layout.scss';
+@import './Projects/HangmanGame/HangmanStyles.scss';
+@import './Styles/topBar.scss';
+@import './Styles/footer.scss';
+@import './Projects/TodoWithAuth/src/Todo.scss';
+@import './Projects/WordDefinition/words.scss';
+
 
 * {
   box-sizing: border-box;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 h1 {
@@ -26,7 +34,12 @@ h1 {
   // background-repeat: no-repeat;
 }
 .page {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
   margin: 0px auto;
+
   @include for-extra-small {
     width: 400px;
   }

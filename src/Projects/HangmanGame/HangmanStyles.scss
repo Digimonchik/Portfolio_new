@@ -1,0 +1,56 @@
+@import './HangmanDrawing.scss';
+
+.hangman {
+
+    &__app {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 100vh;
+    }
+
+    &__container {  
+    max-width: 800px;
+   min-height: 80vh;
+   padding-top: 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 0px auto;
+    align-items: center;
+    position: relative;
+
+    }
+
+
+    .btn {
+        border: 1px solid gray;
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    &__message {
+        top: 50px;
+            position: absolute;
+            font-size: 2rem;
+            text-align: center;
+    }
+
+    &__keyboard {
+            align-self: stretch;
+
+            &_key {
+                    max-width: 100%;
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(75px, 1fr));
+                    gap: 0.5rem
+                
+            }
+    }
+    &__word {
+        font-family: 'Courier New', Courier, monospace;
+        display: flex;
+        font-size: 2rem;
+        gap: 0.25em;
+        text-transform: uppercas;
+    }
+}

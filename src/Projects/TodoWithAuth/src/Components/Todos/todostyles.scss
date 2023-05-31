@@ -1,0 +1,71 @@
+.todo-page {
+
+   height: 100vh;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+
+    &__container {
+        padding-top: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+    &__create {
+        display: flex;
+        width: 500px;
+        min-height: 100px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+            &_input {
+                width: 350px;
+                height: 30px;
+            }
+            &_button {
+                height: 50px;
+                width: 140px;
+                border: 1px solid gray;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 4px;
+                font-size: 12px;
+                cursor: pointer;
+
+            }
+    }
+
+    &__list {
+        width: 500px;
+        min-height: 300px;
+    }
+    &__todo {
+        width: 100%;
+        margin-bottom: 10px;
+        border: 1px solid rgb(170, 168, 168);
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+
+
+        &_text {
+            margin-left: 10px;
+            width: 500px;
+
+        }
+        &_delete {
+            cursor: pointer;
+            margin-left: 20px;
+            margin-right: 10px;
+        }
+        &_isdone {
+            cursor: pointer
+        }
+    }
+
+}
