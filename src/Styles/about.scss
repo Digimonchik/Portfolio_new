@@ -1,4 +1,5 @@
 .about {
+  
   @include for-large {
     width: 100%;
     height: 300px;
@@ -57,9 +58,9 @@
   }
   }
   @include for-extra-small {
-    width: 100%;
+
+    width: 360px;
     height: 300px;
-    margin-top: 60px;
     display: flex;
     align-items: center;
     flex-direction: column;

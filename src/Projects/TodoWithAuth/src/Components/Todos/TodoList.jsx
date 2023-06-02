@@ -14,31 +14,36 @@ const TodoList = () => {
     
      const userId  = authStore.user.id
 
+
+
+    useEffect(() => {
+        if(authStore.isAuth) {
+            todoStore.getTodos(userId)
+        }
+    }, [authStore.isAuth])
     
+
     useEffect(() => setTodos(todoStore.todo), [todoStore.todo])
-    useEffect(() => setTodos(todoStore.todo), [])
+ 
     const handledelete = (id) => {
         todoStore.deleteTodo(id)
         todoStore.getTodos(userId)
     }
 
 
-const show = () => todos.map( element => 
-
-<div className='todo-page__todo' key = {element._id}>
-    <div className='todo-page__todo_text'>{element.text}</div>
-    <div className ='todo-page__todo_isdone'>✓</div>
-    <div className ='todo-page__todo_delete'onClick={() => handledelete(element._id)}>✖</div>
-</div>
-    
-            ) 
 
     return (
         authStore.isAuth? 
         <div className='todo-page__list'>
-            {todos.length > 0 ? show() : <div> You have no active tasks</div> }
+            {todos.length > 0 ? todos.map( element => 
+
+<div className='todo-page__todo' key = {element._id}>
+    <div className='todo-page__todo_text'>{element.text}</div>
+    {/* <div className ='todo-page__todo_isdone'>✓</div> */}
+    <div className ='todo-page__todo_delete'onClick={() => handledelete(element._id)}>✖</div>
+</div>) : <div> You have no active tasks</div> }
         </div> :
-        <div>Please Login to see the tasks</div>
+        <div>Please login to test this App</div>
     );
 };
 

@@ -43,4 +43,10 @@
     flex-wrap: wrap;
 }
 }
+@include for-extra-small {
+
+    &__header {
+    text-align: center;
+}
+}
 }

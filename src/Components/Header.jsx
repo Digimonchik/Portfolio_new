@@ -4,13 +4,13 @@ import TopBar from './TopBar';
 class Header extends Component {
     render() {
         return (
-            <header className= 'header'>
-                <div className='header__info'> 
-                <h1 className='header__info_name'>Dmitry Logvinenko</h1>
-                <div className='header__info_description'>Front End Web Developer</div>
+            <header className= 'page-header'>
+                <div className='page-header__info'> 
+                <h1 className='page-header__info_name'>Dmitry Logvinenko</h1>
+                <div className='page-header__info_description'>Front End Web Developer</div>
                 </div>
 
-                <div className='header__img'></div>
+                <div className='page-header__img'></div>
             </header>
         );
     }

@@ -6,13 +6,21 @@
     flex-direction: column;
     align-items: center;
 
+
+    &__description {
+        width: 500px;
+        text-align: center;
+        line-height: 25px;
+    }
+
     &__container {
         position: absolute;
-        top: 20vh;
+        top: 15vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
+        align-items: center; 
+        width: 800px;
     }
 
     &__find {
@@ -95,11 +103,11 @@
     &__definitions {
         padding-top: 20px;
         padding-bottom: 20px;
-        width: 500px;
+        width: 800px;
         height: 200px;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: space-around;
 
 
         &.hiden {
@@ -173,4 +181,43 @@
         }
 
     }
+
+ @include for-extra-small {
+
+    &__container {
+        width: 100%;
+    }
+    &__description { 
+        width: 360px;
+    }
+    &__find {
+        width: 360px;
+            &_input {
+                width: 240px;
+                height: 30px;
+            }
+            &_button {
+                width: 100px;
+                height: 40px;
+            }
+    }
+
+    &__transcript {
+        width: 360px;
+    }
+    &__definitions {    
+        width: 360px;
+
+        &_button {
+            width: 360px;
+        }
+
+        &_definition {
+            height: fit-content;
+        }
+        &_definition::before {
+            top: 0px;
+        }
+    }
+ }
 }

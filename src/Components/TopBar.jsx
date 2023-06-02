@@ -15,7 +15,7 @@ useEffect(() => setUser(authStore.user), [authStore.user])
 
 
   const handlelogout = () => {
-    console.log('llll')
+
     Cookies.remove('refreshToken');
     localStorage.removeItem('token'); 
     authStore.setAuth(false)
@@ -31,7 +31,7 @@ useEffect(() => setUser(authStore.user), [authStore.user])
 
             <div className='topbar__navigation'>
             <Link to = '/' className='topbar__button'>Homepage</Link>
-            <div className='topbar__greeting'>hey {user.login}</div>
+            <div className='topbar__greeting'>Hi! {user.login}</div>
             </div>
            
            

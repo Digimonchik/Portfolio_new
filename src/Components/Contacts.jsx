@@ -1,10 +1,19 @@
 import React from 'react';
 import Contact from './Contact';
+import { useLocation } from 'react-router-dom';
 
 const Contacts = () => {
+
+
+    const location = useLocation();
+
+    const currentPath = location.pathname;
+
+    
+
     return (
         <div className='contacts'>
-        <h1 className='contacts__header'>Contacts</h1>
+        {currentPath === '/contacts' ? '' : <h1 className='contacts__header'>Contacts</h1>}
         <div className='contacts__container'>
             <Contact text = '+38 (063) 794-67-72' icon = 'https://upload.wikimedia.org/wikipedia/commons/6/6c/Phone_icon.png'></Contact>
             <Contact text ='Digimonchik' icon ='https://cdn4.iconfinder.com/data/icons/iconsimple-logotypes/512/github-512.png'></Contact>

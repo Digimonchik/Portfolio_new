@@ -24,16 +24,24 @@ h1 {
   font-size: 40px;
 }
 #root{
+  background: radial-gradient(circle at 18.7% 37.8%, rgb(250, 250, 250) 0%, rgb(225, 234, 238) 90%);
   background-repeat: no-repeat;
   background-size: cover;
-  width: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
+
+  @include for-extra-small {
+  width: 100%;
+
+  }
+
   // background-image: url('./Styles/images/gradient_portfolio.webp');
   // background-size: cover;
   // background-repeat: no-repeat;
 }
 .page {
+  
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -41,11 +49,11 @@ h1 {
   margin: 0px auto;
 
   @include for-extra-small {
-    width: 400px;
+    width: 100%;
   }
-  @include for-small {
-    width: 640px;
-  }
+  // @include for-small {
+  //   width: 640px;
+  // }
   @include for-large {
     width: 1200px;
   }

@@ -16,7 +16,7 @@ const {todoStore} = useContext(todoContext)
     return (
         <div className='todo-page__create'>
             <input  className = 'todo-page__create_input' type ='text' value = {inputValue} onChange={event => setValue(event.target.value)} ></input>
-            <div className = 'todo-page__create_button' onClick ={() => todoStore.createTodo(userId, inputValue)}>Create task</div>
+            <button disabled ={!authStore.isAuth} className = {authStore.isAuth ? 'todo-page__create_button' : 'todo-page__create_button disabled'} onClick ={() => todoStore.createTodo(userId, inputValue)}>Create task</button>
         </div>
     );
 };

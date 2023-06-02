@@ -30,12 +30,13 @@ export default class TodoStore {
         try {
             const response = await TodoService.getTodos(userId)
             this.todo = response.data
-        
-          
         }
 
         catch(e) {
             console.log('ашибка при загрузка данных')
+        }
+        finally {
+            console.log('flflf')
         }
     }
 

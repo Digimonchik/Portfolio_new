@@ -1,15 +1,16 @@
 import React, {useContext, useEffect} from 'react'
-import { authContext } from './index'
+import { authContext } from '../index'
 import {Routes, Route} from 'react-router-dom'
 import {observer} from 'mobx-react-lite'
-import Homepage from './Components/Homepage'
-import Layouts from './Components/LayoutProjects/Layouts';
-import HangmanApp from './Projects/HangmanGame/src/HangManApp';
-import AuthPage from './Projects/TodoWithAuth/src/Components/AuthPage';
-import LoginForm from './Projects/TodoWithAuth/src/Auth/LoginForm';
-import RegistrationForm from './Projects/TodoWithAuth/src/Auth/RegistrationForm';
-import TodoPage from './Projects/TodoWithAuth/src/Components/Todos/TodoPage';
-import WordDefPage from './Projects/WordDefinition/WordDefPage';
+import Homepage from './Homepage'
+import Layouts from './LayoutProjects/Layouts';
+import HangmanApp from '../Projects/HangmanGame/src/HangManApp';
+import AuthPage from '../Projects/TodoWithAuth/src/Components/AuthPage';
+import LoginForm from '../Projects/TodoWithAuth/src/Auth/LoginForm';
+import RegistrationForm from '../Projects/TodoWithAuth/src/Auth/RegistrationForm';
+import TodoPage from '../Projects/TodoWithAuth/src/Components/Todos/TodoPage';
+import WordDefPage from '../Projects/WordDefinition/WordDefPage';
+import ContactsPage from './ContactsPage'
 
 const App = () => {
 
@@ -39,6 +40,7 @@ const App = () => {
     <Route path = '/auth/login' element={<LoginForm/>}/>
     <Route path = '/auth/registration' element={<RegistrationForm/>}/>
     </Route>
+    <Route path = 'contacts' element = {<ContactsPage/>}></Route>
   </Routes>
   </div>
   )

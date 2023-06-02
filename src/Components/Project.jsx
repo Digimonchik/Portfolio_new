@@ -1,13 +1,14 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
-const Project = ({repo_link, pages_link, image, description}) => {
+const Project = ({pages_link, image, description}) => {
     return (
+        <Link to={pages_link} style={{textDecoration: 'none'}}>
         <div className='project'>
             <div style={{ backgroundImage:`url(${image})` }} className='project__image'></div>
-            <a className ='project__link' href={repo_link} >GitHub repository</a>
-            <a className ='project__link' href={pages_link}>See more</a>
             <span className = 'project__description'>{description}</span>
         </div>
+        </Link>
     );
 };
 
