@@ -20,7 +20,7 @@ const [guessedLetters, setGuessedLetters] = useState([])
 
 const incorectLetters = guessedLetters.filter(letter => !wordToGuess.includes(letter))
   
-const isLoser = incorectLetters.length >=7;
+const isLoser = incorectLetters.length >=6;
 const isWinner = wordToGuess.split("").every(letter => guessedLetters.includes(letter));
 
 

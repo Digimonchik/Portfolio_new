@@ -10,7 +10,8 @@ import LoginForm from '../Projects/TodoWithAuth/src/Auth/LoginForm';
 import RegistrationForm from '../Projects/TodoWithAuth/src/Auth/RegistrationForm';
 import TodoPage from '../Projects/TodoWithAuth/src/Components/Todos/TodoPage';
 import WordDefPage from '../Projects/WordDefinition/WordDefPage';
-import ContactsPage from './ContactsPage'
+import ContactsPage from './ContactsPage';
+
 
 const App = () => {
 

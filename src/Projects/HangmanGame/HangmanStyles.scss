@@ -53,4 +53,19 @@
         gap: 0.25em;
         text-transform: uppercas;
     }
+
+
+
+@include for-extra-small {
+
+
+    &__message {
+        width: 300px;
+        font-size: 20px;
+        top: 50px;
+            position: absolute;
+            text-align: center;
+    }
+}
+
 }

@@ -71,10 +71,7 @@
 
     @include for-extra-small {
 
-     &__container {
-        width: 360px;
-        
-     }
+
      &__create {
         padding-left: 20px;
         padding-right: 20px;
@@ -91,5 +88,24 @@
         width: 340px;
      }
     }
+    @include for-small {
+
+
+        &__create {
+           padding-left: 30px;
+           padding-right: 20px;
+           width: 360px;
+   
+           &_input {
+               width: 200px;
+           }
+           &_button {
+               width: 100px;
+           }
+        }
+        &__list {
+           width: 340px;
+        }
+       }
 
 }

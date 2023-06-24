@@ -23,7 +23,7 @@ description;
 }
 
  const projects = [
-    new MyProject('calendar','https://digimonchik.github.io/Calendar-react-http/', project_calendar, 'myFirst ever js project' ),
+    // new MyProject('calendar','https://digimonchik.github.io/Calendar-react-http/', project_calendar, 'myFirst ever js project' ),
     new MyProject('todos', '/todoApp', project_todo, 'Todo list on MERN' ),
     new MyProject('hangmanGame', '/hangman', hangman, 'Hangman game on React'),
     new MyProject('wordsApp', '/wordsApp', wordsApp, 'Simple app using open API' )

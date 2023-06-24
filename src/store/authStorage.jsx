@@ -50,10 +50,9 @@ export default class AuthStore {
             this.setAuth(true);
             this.setUser(response.data.user);
         } catch (e) {
-            console.log(e.response?.data?.message);
-        }
+          console.log(e)
     }
-
+    }
     async checkAuth() {
         try {
             const response = await AuthService.checkUser()

@@ -22,8 +22,10 @@
     }
     }
     @include for-small {
-        width: 120px;
-        height: 120px;
+        width: 100px;
+        height:100px;
+        margin: 10px;
+        margin-bottom: 50px;
 
         &__image {
             width: 100%;
@@ -39,8 +41,8 @@
         }
 }  
 @include for-extra-small {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     margin: 10px;
     margin-bottom: 50px;
 

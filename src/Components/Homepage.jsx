@@ -22,7 +22,7 @@ const Homepage = () => {
       <Portfolio></Portfolio>
       <Projects></Projects>
       <Contacts></Contacts>
-      <Curiculum></Curiculum>
+        <Curiculum></Curiculum>
       <Footer></Footer>
     </div>
     

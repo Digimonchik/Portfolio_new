@@ -1,9 +1,9 @@
 .footer {
+    margin: auto 0px 0px;
     height: 70px;
     margin-bottom: 10px;
     display: flex;
     flex-direction: row;
-    width: 100%;    
 
 
     @include for-large {
@@ -62,8 +62,34 @@
     }
 
     }
+
+
+
+    @include for-small {
+        justify-content: center;
+        &__navigation {
+            display: none;
+
+    }
+
+
+    &__information {
+
+        align-items: end;
+        text-align: center;
+        padding-right: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 30px;
+        display: flex;
+        font-size: 12px;
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    }
+
+
     @include for-extra-small {
-        width: 400px;
 
         &__navigation {
             display: none;

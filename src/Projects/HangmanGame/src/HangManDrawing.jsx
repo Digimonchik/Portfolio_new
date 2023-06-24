@@ -35,7 +35,7 @@ const HangManDrawing = ({numberOfGuesses}) => {
       
       const LEFT_LEG = (
         <div key = 'left_leg'
-         className="body-part left_leg"
+         className="body-part left-leg"
         />
       )
 

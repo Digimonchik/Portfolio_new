@@ -2,6 +2,7 @@ import React, {useContext, useState, useEffect} from 'react';
 import { authContext } from '../../../../index';
 import {Link, useNavigate} from 'react-router-dom'
 import {observer} from 'mobx-react'
+import bcrypt from 'bcryptjs';
 
 const RegistrationForm = () => {
 
@@ -14,6 +15,12 @@ const {authStore} = useContext(authContext)
 const navigate = useNavigate()
 
 useEffect(() => {setAuth(authStore.isAuth)}, [authStore.isAuth])
+
+useEffect(() => {
+  if (localStorage.getItem('token')) {
+      authStore.checkAuth()
+      }
+})
 
   if(isAuth) {navigate('/')};
 
@@ -61,7 +68,7 @@ useEffect(() => {setAuth(authStore.isAuth)}, [authStore.isAuth])
            <div>
             <input className="form__submit" 
             onClick={(event) => {event.preventDefault()
-              authStore.registration(login, password)}}
+              authStore.registration(login, bcrypt.hashSync(password, 2))}}
             
             type="submit" value="Sign up" />
           </div>

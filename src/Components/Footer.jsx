@@ -10,7 +10,7 @@ const Footer = () => {
             </div>
             <div className='footer__information'>
 
-                this website is still under development. If you see any errors, please contact me via email or telegram. thank you!
+                This website is still under development. If you see any errors, please contact me via email or telegram. thank you!
             </div>
         </div>
     );

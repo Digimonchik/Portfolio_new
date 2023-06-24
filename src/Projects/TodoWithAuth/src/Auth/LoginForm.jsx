@@ -1,6 +1,6 @@
 import React, {useContext, useState, useEffect} from 'react';
 import { authContext } from '../../../../index';
-import {Link, useNavigate, useHistory} from 'react-router-dom'
+import {Link, useNavigate} from 'react-router-dom'
 import {observer} from 'mobx-react'
 
 const LoginForm = () => {
@@ -15,7 +15,14 @@ const navigate = useNavigate()
 
 useEffect(() => {setAuth(authStore.isAuth)}, [authStore.isAuth])
 
-  if(isAuth) {navigate(-1)};
+useEffect(() => {
+  if (localStorage.getItem('token')) {
+      authStore.checkAuth()
+      console.log('работает')}
+})
+
+
+  if(isAuth) {navigate('/')};
 
 
 
@@ -49,7 +56,9 @@ useEffect(() => {setAuth(authStore.isAuth)}, [authStore.isAuth])
             </div> 
            <div>
             <input className="form__submit" 
-            onClick={() => {authStore.login(login, password)}}
+            onClick={(event) => {event.preventDefault()
+              authStore.login(login, password)}}
+            
             
             type="submit" value="Sign in" />
           </div>
