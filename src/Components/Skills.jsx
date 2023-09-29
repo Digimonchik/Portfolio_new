@@ -15,7 +15,8 @@ const  Skills = () => {
             <Skill text = 'Express JS'icon = 'https://creazilla-store.fra1.digitaloceanspaces.com/icons/3498663/status-iucn-ex-icon-blank-icon-md.png'></Skill>
             <Skill text = 'Node JS'icon = 'https://static-00.iconduck.com/assets.00/node-js-icon-227x256-913nazt0.png'></Skill>
             <Skill text = 'Mongo DB'icon = 'https://www.svgrepo.com/show/331488/mongodb.svg'></Skill>
-            </div>
+            <Skill text = 'AI'icon = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReoK7SJciVwx_oBPygSp71pAc9kPNWMsG_VfNUP5GlSw&s'></Skill>
+            </div> 
         </div>
     );
 };

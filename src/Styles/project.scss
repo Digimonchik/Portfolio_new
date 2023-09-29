@@ -45,6 +45,9 @@
         align-items: center;
         font-size: 16px;
         border-radius: 2%;
+        @include for-extra-small {
+            text-align: center;
+        }
     }
     }
 

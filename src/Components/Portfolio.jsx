@@ -20,7 +20,7 @@ const Portfolio = () => {
                 <Project  pages_link = {pages.template_1}  image = {landing_first} description ='My first ever layout made with HTML/Sass '> </Project>
                 <Project  pages_link = {pages.template_2}  image= {landing_second} description = 'Responsive layout HTML/Sass'></Project>
                 <Project  pages_link = {pages.template_3}  image = {landing_third} description = 'Responsive cards HTML/Sass'></Project>
-                <Project  pages_link = {pages.template_4}  image = {slider} description = 'Flexible slider HTML/Css'></Project>
+                {/* <Project  pages_link = {pages.template_4}  image = {slider} description = 'Flexible slider HTML/Css'></Project> */}
             </div>
         </div>
     );
