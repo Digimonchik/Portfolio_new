@@ -1,4 +1,5 @@
-import {makeAutoObservable} from "mobx";   
+import {makeAutoObservable} from "mobx";  
+ 
 
 
 import {AuthService} from "../Projects/TodoWithAuth/src/services/AuthService"
@@ -8,6 +9,7 @@ import {AuthService} from "../Projects/TodoWithAuth/src/services/AuthService"
 
 export default class AuthStore {
     user = {}
+    error = ''
     isAuth = false;
     isLoading = false;
 
@@ -23,26 +25,27 @@ export default class AuthStore {
     setUser(user) {
         this.user = user;
     }
+    setError(error) {
+        this.error = error
+    }
 
     setLoading(bool) {
         this.isLoading = bool;
     }
 
     async login(login, password) {
-
+   
         try {
             const response = await AuthService.login(login, password);
             localStorage.setItem('token', response.data.accessToken);
             this.setAuth(true);
             this.setUser(response.data.user);
         } catch (e) {   
-            console.log(e)
+            this.setError(e.response.data.error.message)
         }
     }
 
     async registration(login, password) {
-
-        console.log(login, password)
         try {
             const response = await AuthService.registration(login, password);
             console.log(response)
@@ -50,11 +53,12 @@ export default class AuthStore {
             this.setAuth(true);
             this.setUser(response.data.user);
         } catch (e) {
-          console.log(e)
+            this.setError(e.response.data.error.message)
     }
     }
     async checkAuth() {
         try {
+            this.setError('')
             const response = await AuthService.checkUser()
             localStorage.setItem('token', response.data.accessToken);
             this.setAuth(true);

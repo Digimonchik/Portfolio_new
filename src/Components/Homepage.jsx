@@ -8,6 +8,7 @@ import Curiculum from './Curiculum';
 import TopBar from './TopBar';
 import Footer from './Footer';
 import Projects from './Projects';
+import FullStackApp from './FullStackApp';
 
 
 const Homepage = () => {
@@ -21,8 +22,9 @@ const Homepage = () => {
       <Skills></Skills>
       <Portfolio></Portfolio>
       <Projects></Projects>
+      <FullStackApp></FullStackApp>
       <Contacts></Contacts>
-        <Curiculum></Curiculum>
+      <Curiculum></Curiculum>
       <Footer></Footer>
     </div>
     

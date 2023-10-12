@@ -12,6 +12,8 @@ const [isAuth, setAuth] = useState(false)
 
 const {authStore} = useContext(authContext)
 
+const error = authStore.error
+
 const navigate = useNavigate()
 
 useEffect(() => {setAuth(authStore.isAuth)}, [authStore.isAuth])
@@ -33,7 +35,8 @@ useEffect(() => {
           <h3 className="form__header_sign-in">Sign up</h3>
           <Link to = '/auth/login'> <div className="form__header_button">login</div></Link>
         </div>
-      
+        <div className = 'form__error'>{error}</div>
+
         <form className = 'form__inputs' action="#">
             <div>
                <label className="form__label user" htmlFor="text">

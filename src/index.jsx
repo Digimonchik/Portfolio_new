@@ -7,6 +7,8 @@ import './index.scss';
 import Store from './store/store'
 import AuthStore from './store/authStorage'
 import TodoStore from './store/todoStore'
+import { useLayoutEffect } from 'react';
+import {useLocation } from 'react-router-dom';
 import WordsStore from './store/wordsStore';
 
 const container = document.getElementById("root")
@@ -23,11 +25,25 @@ export const Context = createContext({store})
 export const todoContext = createContext({todoStore})
 
 
+
+const Wrapper = ({ children }) => {
+    const location = useLocation();
+    
+    useLayoutEffect(() => {
+      document.documentElement.scrollTo(0, 0);
+    }, [location.pathname]);
+    
+    return children;
+  };
+
+
+
 root.render(
     <Provider value = {{authStore, store, todoStore, wordsStore}}>
      <BrowserRouter>
-     <App
-    />
+     <Wrapper>
+    <App />
+    </Wrapper> 
     </BrowserRouter>
     </Provider>
 )
