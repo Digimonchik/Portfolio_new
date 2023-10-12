@@ -6,8 +6,8 @@ class Header extends Component {
         return (
             <header className= 'page-header'>
                 <div className='page-header__info'> 
-                <h1 className='page-header__info_name'>Dmitry Logvinenko</h1>
-                <div className='page-header__info_description'>Front-End Web Developer</div>
+                <h1 className='page-header__info_name'>Dmytro Lohvynenko</h1>
+                <div className='page-header__info_description'>Front-End Developer</div>
                 </div>
 
                 <div className='page-header__img'></div>

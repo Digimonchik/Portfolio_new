@@ -37,7 +37,7 @@ return (
             <TopBar/>
     
             <div className='word-page__container'>
-            <div className='word-page__description'>Hi! This app is only aimed at showing the ability to use REST API. All data is taken from <a style = {{textDecoration: 'none' , color: 'inherit'}} href='https://dictionaryapi.dev/'> https://dictionaryapi.dev/ </a></div>
+            <div className='word-page__description'>Hi! This app is only aimed at showing the ability to use open source API. All data is taken from <a style = {{textDecoration: 'none' , color: 'inherit'}} href='https://dictionaryapi.dev/'> https://dictionaryapi.dev/ </a></div>
             <div className='word-page__find'>
                 <input onChange = {event => setWord(event.target.value)} vulue = {word}className ='word-page__find_input'></input>
                 <div onClick = {() => handleClick()}className='word-page__find_button'>Find word</div>

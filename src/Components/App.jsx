@@ -23,7 +23,6 @@ const App = () => {
   useEffect(() => {
     if (localStorage.getItem('token')) {
         authStore.checkAuth()
-        console.log('работает')
   }
 })
 

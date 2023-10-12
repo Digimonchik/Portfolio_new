@@ -62,7 +62,7 @@ useEffect(() => {
             
             type="submit" value="Sign in" />
           </div>
-            <span className="form__forgot-label">if you dont want to register please use admin as login and password to test this app</span>
+            <span className="form__forgot-label">if you don't want to register please use admin as login and password to test this app</span>
         </form>  
       </div>
       </div>

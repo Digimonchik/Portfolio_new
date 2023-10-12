@@ -26,7 +26,7 @@ description;
     // new MyProject('calendar','https://digimonchik.github.io/Calendar-react-http/', project_calendar, 'myFirst ever js project' ),
     new MyProject('todos', '/todoApp', project_todo, 'Todo list on MERN' ),
     new MyProject('hangmanGame', '/hangman', hangman, 'Hangman game on React'),
-    new MyProject('wordsApp', '/wordsApp', wordsApp, 'Simple app using open API' )
+    new MyProject('wordsApp', '/wordsApp', wordsApp, 'Simple dictionary app using open API' )
 
 ]
 
