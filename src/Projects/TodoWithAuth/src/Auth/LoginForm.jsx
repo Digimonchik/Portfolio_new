@@ -21,7 +21,7 @@ useEffect(() => {setAuth(authStore.isAuth)}, [authStore.isAuth])
 useEffect(() => {
   if (localStorage.getItem('token')) {
       authStore.checkAuth()
-      console.log('работает')}
+    }
 })
 
 
@@ -62,6 +62,7 @@ useEffect(() => {
            <div>
             <input className="form__submit" 
             onClick={(event) => {event.preventDefault()
+              authStore.setLoading(true)
               authStore.login(login, password)}}
             
             
