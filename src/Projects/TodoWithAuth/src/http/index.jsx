@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // export const API_URL = `http://localhost:5000/server`
-export const API_URL = `https://digiport.kiev.ua/server`
+export const API_URL = `https://digiport.com.ua/server`
 
 // export const API_URL = ':3001/api'
 
