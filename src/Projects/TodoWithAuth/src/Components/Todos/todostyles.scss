@@ -1,16 +1,51 @@
 .todo-page {
 
-   height: 100vh;
+   min-height: 100vh;
    display: flex;
    flex-direction: column;
-   justify-content: space-between;
+   justify-content: center;
+   align-self: center;
 
+   &__description {
+    width: 85%;
+    justify-self: center;
+    text-align: center;
+    height: 70px;
+   }
+
+   
     &__container {
+        margin-top: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        height: 70%;
+
+        @include for-extra-small {
+            flex-direction: column;
+            justify-content: center;
+            height: 70%;
+            margin-bottom: 40px;
+        }
+
+        &_list {
         padding-top: 50px;
         display: flex;
         flex-direction: column;
         align-items: center;
-        
+        width: 50%;
+
+        @include for-extra-small {
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+        }
+        &.redux {
+        }
+    }
+
+        &.redux {
+        }
     }
     &__create {
         display: flex;
@@ -42,6 +77,9 @@
     &__list {
         width: 500px;
         min-height: 300px;
+        @include for-extra-small {
+            min-height: 150px;
+        }
     }
     &__todo {
         width: 100%;
@@ -52,6 +90,10 @@
         justify-content: center;
         align-items: center;
         border-radius: 5px;
+        
+        &.green {
+            background-color: lightgreen;
+        }
 
 
         &_text {
@@ -108,4 +150,4 @@
         }
        }
 
-}
+    }

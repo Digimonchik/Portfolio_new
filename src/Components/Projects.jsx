@@ -1,9 +1,9 @@
 import React from 'react';
 import Project from './Project';
-import project_calendar from '../Styles/images/calendar_project.JPG'
 import hangman from '../Styles/images/hangman.jpg'
-import project_todo from '../Styles/images/todo.jpg'
+import project_todo from '../Styles/images/todo.png'
 import wordsApp from '../Styles/images/wordapp.jpg'
+import gifsApp from '../Styles/images/gifs.png'
 
 
 
@@ -23,10 +23,11 @@ description;
 }
 
  const projects = [
-    // new MyProject('calendar','https://digimonchik.github.io/Calendar-react-http/', project_calendar, 'myFirst ever js project' ),
-    new MyProject('todos', '/todoApp', project_todo, 'Todo list on MERN' ),
-    new MyProject('hangmanGame', '/hangman', hangman, 'Hangman game on React'),
-    new MyProject('wordsApp', '/wordsApp', wordsApp, 'Simple dictionary app using open API' )
+    new MyProject('todos', '/todoApp', project_todo, 'Todo-lists: React/Redux-toolkit/MERN' ),
+    new MyProject('hangmanGame', '/hangman', hangman, 'Hangman game: React/MobX'),
+    new MyProject('wordsApp', '/wordsApp', wordsApp, 'Dictionary: React/MobX' ),
+    new MyProject('GifsApp', '/gifsApp', gifsApp,  'Gifs search: React/Redux-toolkit' )
+
 
 ]
 
@@ -34,7 +35,7 @@ const Projects = () => {
     
     return (
         <div className='portfolio'>
-            <h1 className='portfolio__header'>Projects</h1>
+            <h1 className='portfolio__header'>Pet projects</h1>
             <div className=' portfolio__container'>
 
         {projects.map(element => <Project 

@@ -1,0 +1,52 @@
+.gifs-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.gifs-app {
+
+  &__search {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &_field {
+      flex-grow: 1;
+    }
+    &_input {
+      width: 50%;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+     @include for-extra-small {
+      width: 70%;
+     }
+    }
+
+    &_button {
+      height: 30px;
+      width: 100px;
+      border: 1px solid gray;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 4px;
+      font-size: 12px;
+      cursor: pointer;
+    }
+  }
+
+  &__gifs {
+    padding-top: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    &_item {
+      margin: 3px;
+    }
+  }
+}

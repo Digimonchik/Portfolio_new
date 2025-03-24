@@ -3,6 +3,9 @@ import {createRoot} from 'react-dom/client';
 import {BrowserRouter} from 'react-router-dom'
 import App from './Components/App';
 import { Provider } from 'mobx-react';
+import { Provider as ReduxProvider } from 'react-redux';
+import reduxStore from './store/reduxStore/store';
+
 import './index.scss';
 import Store from './store/store'
 import AuthStore from './store/authStorage'
@@ -39,6 +42,7 @@ const Wrapper = ({ children }) => {
 
 
 root.render(
+  <ReduxProvider store = {reduxStore}>
     <Provider value = {{authStore, store, todoStore, wordsStore}}>
      <BrowserRouter>
      <Wrapper>
@@ -46,4 +50,5 @@ root.render(
     </Wrapper> 
     </BrowserRouter>
     </Provider>
+    </ReduxProvider>
 )

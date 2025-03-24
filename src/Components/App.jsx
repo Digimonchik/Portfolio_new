@@ -11,6 +11,7 @@ import RegistrationForm from '../Projects/TodoWithAuth/src/Auth/RegistrationForm
 import TodoPage from '../Projects/TodoWithAuth/src/Components/Todos/TodoPage';
 import WordDefPage from '../Projects/WordDefinition/WordDefPage';
 import ContactsPage from './ContactsPage';
+import GifsPage from '../Projects/GifsApp/GifsPage'
 
 
 const App = () => {
@@ -40,6 +41,7 @@ const App = () => {
     <Route path = '/auth/login' element={<LoginForm/>}/>
     <Route path = '/auth/registration' element={<RegistrationForm/>}/>
     </Route>
+    <Route path = 'gifsApp' element = {<GifsPage/>}></Route>
     <Route path = 'contacts' element = {<ContactsPage/>}></Route>
   </Routes>
   </div>

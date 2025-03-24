@@ -12,9 +12,9 @@ const FullStackApp = () => {
     
     return (
         <div className='portfolio'>
-            <h1 className='portfolio__header'>Web Apps</h1>
+            <h1 className='portfolio__header'>Websites</h1>
             <div className=' portfolio__container'>
-                <Project  pages_link = {pages.template_1}  image = {wts} description ='Fullstack web app for online training center'> </Project>
+                <Project  pages_link = {pages.template_1}  image = {wts} description ='Fullstack website for online training center'> </Project>
             </div>
         </div>
     );
