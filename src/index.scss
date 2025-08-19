@@ -1,13 +1,12 @@
-@import './Styles/header.scss';
+@import './Styles/mixins.scss';
 @import './Styles/about.scss';
 @import './Styles/skills.scss';
 @import './Styles/portfolio.scss';
 @import './Styles/contacts.scss';
 @import './Styles/curiculum.scss';
-@import './Styles/mixins.scss';
 @import './Styles/layout.scss';
 @import './Projects/HangmanGame/HangmanStyles.scss';
-@import './Styles/topBar.scss';
+@import './Components/TopBar/topBar.scss';
 @import './Styles/footer.scss';
 @import './Projects/TodoWithAuth/src/Todo.scss';
 @import './Projects/WordDefinition/words.scss';
@@ -25,7 +24,8 @@ h1 {
   font-weight: 600;
   font-size: 40px;
 }
-#root{
+
+#root {
   background: radial-gradient(circle at 18.7% 37.8%, rgb(250, 250, 250) 0%, rgb(225, 234, 238) 90%);
   background-repeat: no-repeat;
   background-size: cover;
@@ -34,7 +34,7 @@ h1 {
   align-items: center;
 
   @include for-extra-small {
-  width: 100%;
+    width: 100%;
 
   }
 
@@ -42,6 +42,7 @@ h1 {
   // background-size: cover;
   // background-repeat: no-repeat;
 }
+
 .page {
   width: 100%;
   display: flex;
@@ -52,12 +53,14 @@ h1 {
   @include for-extra-small {
     width: 375px;
   }
+
   // @include for-small {
   //   width: 640px;
   // }
   @include for-large {
-    width: 1200px;
+    min-width: 1200px;
   }
+
   // background-image: url('./Styles/images/header_gradient.jpg');
   // background-size: contain;
   // background-repeat: no-repeat;
