@@ -1,0 +1,14 @@
+.skills {
+
+  position: relative;
+  z-index: 1;
+
+  &__container {
+    justify-self: center;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); // 4 колонки одинаковой ширины
+    // grid-template-rows: repeat(2, auto); // 2 строки, высота по содержимому
+    gap: 20px;
+    width: 80%;
+  }
+}

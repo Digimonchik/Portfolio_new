@@ -1,24 +1,108 @@
+// @keyframes rotate {
+//     0% {
+//         transform: rotate(0deg);
+//     }
+
+//     100% {
+//         transform: rotate(360deg);
+//     }
+// }
+
 .page-header {
     width: 100%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     height: 800px;
-    background: green;
 
 
     &__info {
-        background: red;
         width: 50%;
         height: 100%;
 
         &_logo {
-            width: 300px;
-            height: 300px;
+            width: 220px;
+            height: 220px;
             background-image: (url('./logo.png'));
             background-size: cover;
-            margin-bottom: 20px;
             position: relative;
             top: -80px;
+            left: 120px;
+        }
+
+        &_description {
+            font-size: 2rem;
+            color: white;
+            margin-bottom: 20px;
+            margin-left: 200px
+        }
+
+        &_name {
+            font-size: 3.5rem;
+            color: white;
+            text-transform: uppercase;
+            ;
+            margin-left: 200px;
+        }
+
+        &_button {
+            width: 200px;
+            height: 50px;
+            text-decoration: unset;
+            background: var(--base-color-yellow);
+            color: white;
+            text-align: center;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            margin-left: 200px;
+
+            &:hover {
+                background-color: #0056b3;
+            }
+        }
+    }
+
+    &__img {
+        width: 50%;
+        height: 100%;
+
+        &_image {
+            width: 80%;
+            height: 80%;
+            position: relative;
+            top: 40px;
+            border: 1px solid var(--base-color-yellow);
+            background-image: url('./header_photo.png');
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+
+            & span {
+                position: absolute;
+                width: 70px;
+                height: 70px;
+                border-radius: 50%;
+                background: linear-gradient(to right, black, white);
+                animation: rotate 1s linear infinite;
+
+                &:nth-child(1) {
+                    top: 30px;
+                    left: 210px;
+                }
+
+                &:nth-child(2) {
+                    top: 400px;
+                    left: 90px;
+                }
+
+                &:nth-child(3) {
+                    top: 100px;
+                    right: 140px;
+                }
+            }
+
         }
     }
 }

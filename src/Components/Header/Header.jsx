@@ -9,15 +9,21 @@ class Header extends Component {
         <div className="page-header__info">
           <div className="page-header__info_logo"></div>
           <div className="page-header__info_description">
-            Front-End Developer
+            frontend developer
           </div>
           <h1 className="page-header__info_name">Dmytro Lohvynenko</h1>
 
-          <Link className="page-header__info_button" to="/cv">
-            Contact me
+          <Link to="/cv">
+            <button className="page-header__info_button">Contact me</button>
           </Link>
         </div>
-        <div className="page-header__img"></div>
+        <div className="page-header__img">
+          <div className="page-header__img_image">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
       </div>
     );
   }
