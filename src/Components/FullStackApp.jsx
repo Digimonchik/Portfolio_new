@@ -1,23 +1,25 @@
-import React from 'react';
-import Project from './Project';
-import wts from '../Styles/images/wts.JPG'
-
+import React from "react";
+import Project from "./Project";
+import wts from "../Styles/images/wts.JPG";
 
 const pages = {
-    template_1: 'https://w-ts.com.ua',
-
-}
-
-const FullStackApp = () => {
-    
-    return (
-        <div className='portfolio'>
-            <h1 className='portfolio__header'>Websites</h1>
-            <div className=' portfolio__container'>
-                <Project  pages_link = {pages.template_1}  image = {wts} description ='Fullstack website for online training center'> </Project>
-            </div>
-        </div>
-    );
+  template_1: "https://w-ts.com.ua",
 };
 
-export default FullStackApp
+const FullStackApp = () => {
+  return (
+    <div>
+      <div>
+        <Project
+          pages_link={pages.template_1}
+          image={wts}
+          description="Fullstack website for online training center"
+        >
+          {" "}
+        </Project>
+      </div>
+    </div>
+  );
+};
+
+export default FullStackApp;

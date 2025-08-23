@@ -1,8 +1,6 @@
 @import './Styles/mixins.scss';
-@import './Styles/portfolio.scss';
 @import './Styles/contacts.scss';
 @import './Styles/curiculum.scss';
-@import './Styles/layout.scss';
 @import './Projects/HangmanGame/HangmanStyles.scss';
 @import './Components/TopBar/topBar.scss';
 @import './Styles/footer.scss';
@@ -48,6 +46,7 @@
 
 .page {
   width: 100%;
+  background: red;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

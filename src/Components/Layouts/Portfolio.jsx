@@ -1,9 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import landing_first from "./template1.JPG";
-import landing_second from "./template2.JPG";
-import landing_third from "./template3.JPG";
-import landing_fifth from "./template5.JPG";
+import "./portfolio.scss";
+import landing_first from "./1.PNG";
+import landing_second from "./2.PNG";
+import landing_third from "./3.PNG";
+import landing_fifth from "./4.PNG";
 const pages = {
   template_1: "https://digimonchik.github.io/site_template_1/",
   template_2: "https://digimonchik.github.io/site_template_2/",
@@ -17,11 +18,35 @@ const Portfolio = () => {
     <div className="portfolio">
       <h1 className="portfolio__header">Layouts</h1>
       <div className=" portfolio__container">
-        <Link to={pages.template_1} style={{ textDecoration: "none" }}>
+        <Link to={pages.template_1}>
           <div className="project">
             <div
               style={{ backgroundImage: `url(${landing_first})` }}
-              className="project__image"
+              className="layout__image"
+            ></div>
+          </div>
+        </Link>
+        <Link to={pages.template_2}>
+          <div className="project">
+            <div
+              style={{ backgroundImage: `url(${landing_second})` }}
+              className="layout__image"
+            ></div>
+          </div>
+        </Link>
+        <Link to={pages.template_3}>
+          <div className="project">
+            <div
+              style={{ backgroundImage: `url(${landing_third})` }}
+              className="layout__image"
+            ></div>
+          </div>
+        </Link>
+        <Link to={pages.template_5}>
+          <div className="project">
+            <div
+              style={{ backgroundImage: `url(${landing_fifth})` }}
+              className="layout__image"
             ></div>
           </div>
         </Link>
