@@ -1,7 +1,7 @@
 import React from "react";
 import Contacts from "./Contacts";
-import TopBar from "./TopBar/TopBar";
-import Footer from "./Footer";
+import TopBar from "../TopBar/TopBar";
+import Footer from "../Footer/Footer";
 
 const ContactsPage = () => {
   return (

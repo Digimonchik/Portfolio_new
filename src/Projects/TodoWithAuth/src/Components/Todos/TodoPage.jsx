@@ -2,7 +2,7 @@ import React from "react";
 import CreateTodo from "./CreateTodo";
 import TodoList from "./TodoList";
 import TopBar from "../../../../../Components/TopBar/TopBar";
-import Footer from "../../../../../Components/Footer";
+import Footer from "../../../../../Components/Footer/Footer";
 import TodoListRedux from "../../../../TodoRedux/Components/TodoListRedux";
 
 const TodoPage = () => {

@@ -1,6 +1,6 @@
 import React from "react";
 import TopBar from "../../Components/TopBar/TopBar";
-import Footer from "../../Components/Footer";
+import Footer from "../../Components/Footer/Footer";
 import GifsApp from "../GifsApp/GifsApp";
 
 const GifsPage = () => {

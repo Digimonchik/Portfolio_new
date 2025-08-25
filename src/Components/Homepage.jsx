@@ -3,12 +3,11 @@ import About from "./About/About";
 import Header from "./Header/Header";
 import Skills from "./Skills/Skills";
 import Portfolio from "./Layouts/Portfolio";
-import Contacts from "./Contacts";
+import Contacts from "./Contacts/Contacts";
 import Curiculum from "./Curiculum";
 import TopBar from "./TopBar/TopBar";
-import Footer from "./Footer";
-import Projects from "./Projects";
-import FullStackApp from "./FullStackApp";
+import Footer from "./Footer/Footer";
+import Projects from "./Projects/Projects";
 
 const Homepage = () => {
   return (
@@ -19,9 +18,6 @@ const Homepage = () => {
       <About></About>
       <Portfolio></Portfolio>
       <Projects></Projects>
-      <FullStackApp></FullStackApp>
-      <Contacts></Contacts>
-      <Curiculum></Curiculum>
       <Footer></Footer>
     </div>
   );

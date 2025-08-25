@@ -19,7 +19,7 @@ const Portfolio = () => {
       <h1 className="portfolio__header">Layouts</h1>
       <div className=" portfolio__container">
         <Link to={pages.template_1}>
-          <div className="project">
+          <div className="layout">
             <div
               style={{ backgroundImage: `url(${landing_first})` }}
               className="layout__image"
@@ -27,7 +27,7 @@ const Portfolio = () => {
           </div>
         </Link>
         <Link to={pages.template_2}>
-          <div className="project">
+          <div className="layout">
             <div
               style={{ backgroundImage: `url(${landing_second})` }}
               className="layout__image"
@@ -35,7 +35,7 @@ const Portfolio = () => {
           </div>
         </Link>
         <Link to={pages.template_3}>
-          <div className="project">
+          <div className="layout">
             <div
               style={{ backgroundImage: `url(${landing_third})` }}
               className="layout__image"
@@ -43,7 +43,7 @@ const Portfolio = () => {
           </div>
         </Link>
         <Link to={pages.template_5}>
-          <div className="project">
+          <div className="layout">
             <div
               style={{ backgroundImage: `url(${landing_fifth})` }}
               className="layout__image"
