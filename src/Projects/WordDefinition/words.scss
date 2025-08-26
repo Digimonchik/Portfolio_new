@@ -2,30 +2,30 @@
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items: center;  
+    align-items: center;
+    width: 100%;
 
     // &__footer-container {   
     //     margin: auto 0px 0px;
     // }
 
     &__description {
-        width: 500px;
         text-align: center;
         line-height: 25px;
     }
 
     &__container {
-        margin-top: 10vh;
+        margin: 50px;
         display: flex;
-        min-height: 80%;
+        padding: 50px;
+        min-height: 80vh;
         flex-direction: column;
         justify-content: center;
-        align-items: center; 
-        width: 800px;
+        align-items: center;
+        background: red;
     }
 
     &__find {
-
         display: flex;
         width: 500px;
         min-height: 100px;
@@ -33,27 +33,28 @@
         justify-content: space-between;
         align-items: center;
 
-            &_input {
-                width: 350px;
-                height: 40px;
-                &:focus {
-                    border: 1px solid lightgray;
-                }
-            }
-            
+        &_input {
+            width: 350px;
+            height: 40px;
 
-            &_button {
-                height: 50px;
-                width: 140px;
-                border: 1px solid gray;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                background-color: none;
-                border-radius: 4px;
-                font-size: 12px;
-                cursor: pointer;
-    }
+            &:focus {
+                border: 1px solid lightgray;
+            }
+        }
+
+
+        &_button {
+            height: 50px;
+            width: 140px;
+            border: 1px solid gray;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: none;
+            border-radius: 4px;
+            font-size: 12px;
+            cursor: pointer;
+        }
 
 
     }
@@ -61,44 +62,45 @@
     &__transcript {
         width: 500px;
         height: 100px;
-  
+
         display: flex;
         flex-direction: row;
 
-            &_word {
-                width: 50%;
-                height: 60px;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
+        &_word {
+            width: 50%;
+            height: 60px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: large;
+            font-weight: 400;
+            position: relative;
+
+            &::after {
+                content: "";
+                position: absolute;
                 justify-content: center;
-                font-size: large;
-                font-weight: 400;
-                position: relative;
-                 
-                &::after {
-                    content: "";
-                    position: absolute;
-                    justify-content: center;
-                    bottom: 10px;
-                    width: 150px;
-                    height: 1px;
-                    background-color: gray;
-                }
-                
+                bottom: 10px;
+                width: 150px;
+                height: 1px;
+                background-color: gray;
             }
-            &_letters {
-                width: 50%;
-                height: 60px;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                font-size: large;
-                font-weight: 700;
-                position: relative;
-                
-            }
+
+        }
+
+        &_letters {
+            width: 50%;
+            height: 60px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: large;
+            font-weight: 700;
+            position: relative;
+
+        }
     }
 
     &__definitions {
@@ -112,7 +114,7 @@
 
 
         &.hiden {
-          display: none;
+            display: none;
         }
 
         &_definition {
@@ -133,9 +135,10 @@
                 height: 10px;
                 border-radius: 100%;
                 background-color: gray;
-            } 
+            }
 
         }
+
         &_button {
 
             width: 500px;
@@ -143,32 +146,33 @@
             position: relative;
             text-align: center;
             display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-           
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
             &.isopen {
 
-              &::after {
-                position: absolute;
-                content:'❬';
-                transform: rotate(270deg);
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                top: 0px;
-                font-size: 20px;
-                right: 50px;
-                width: 20px;
-                height: 20px;
+                &::after {
+                    position: absolute;
+                    content: '❬';
+                    transform: rotate(270deg);
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    top: 0px;
+                    font-size: 20px;
+                    right: 50px;
+                    width: 20px;
+                    height: 20px;
 
-              }
+                }
             }
+
             &.isclosed {
                 &::after {
                     position: absolute;
-                    content:'❬';
+                    content: '❬';
                     transform: rotate(90deg);
                     display: flex;
                     flex-direction: column;
@@ -179,85 +183,96 @@
                     right: 50px;
                     width: 20px;
                     height: 20px;
-                  }
+                }
             }
         }
 
     }
 
- @include for-extra-small {
+    @include for-extra-small {
 
-    &__container {
-        width: 100%;
-    }
-    &__description { 
-        width: 360px;
-    }
-    &__find {
-        width: 360px;
+        &__container {
+            width: 100%;
+        }
+
+        &__description {
+            width: 360px;
+        }
+
+        &__find {
+            width: 360px;
+
             &_input {
                 width: 240px;
                 height: 30px;
             }
+
             &_button {
                 width: 100px;
                 height: 40px;
             }
-    }
+        }
 
-    &__transcript {
-        width: 360px;
-    }
-    &__definitions {    
-        width: 360px;
-
-        &_button {
+        &__transcript {
             width: 360px;
         }
 
-        &_definition {
-            height: fit-content;
-        }
-        &_definition::before {
-            top: 0px;
+        &__definitions {
+            width: 360px;
+
+            &_button {
+                width: 360px;
+            }
+
+            &_definition {
+                height: fit-content;
+            }
+
+            &_definition::before {
+                top: 0px;
+            }
         }
     }
- }
 
- @include for-small {
-    height: 100%;
+    @include for-small {
+        height: 100%;
 
-    &__description { 
-        width: 360px;
-    }
-    &__find {
-        width: 360px;
+        &__description {
+            width: 360px;
+        }
+
+        &__find {
+            width: 360px;
+
             &_input {
                 width: 240px;
                 height: 30px;
             }
+
             &_button {
                 width: 100px;
                 height: 40px;
             }
-    }
+        }
 
-    &__transcript {
-        width: 360px;
-    }
-    &__definitions {    
-        width: 360px;
-
-        &_button {
+        &__transcript {
             width: 360px;
         }
 
-        &_definition {
-            height: fit-content;
-        }
-        &_definition::before {
-            top: 0px;
+        &__definitions {
+            width: 360px;
+
+            &_button {
+                width: 360px;
+            }
+
+            &_definition {
+                height: fit-content;
+            }
+
+            &_definition::before {
+                top: 0px;
+            }
         }
     }
- }
 }

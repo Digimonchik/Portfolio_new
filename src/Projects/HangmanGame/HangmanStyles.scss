@@ -9,63 +9,120 @@
         min-height: 100vh;
     }
 
-    &__container {  
-    max-width: 800px;
-   min-height: 80vh;
-   padding-top: 150px;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    margin: 0px auto;
-    align-items: center;
-    position: relative;
+    &__refresh {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        border: none;
+        background: none;
+        cursor: pointer;
+        font-size: 1.5rem;
+        color: white;
+
+        &:hover {
+            color: hsl(200, 100%, 50%);
+        }
+
+        &::before {
+            content: '⟳';
+        }
+    }
+
+    &__container {
+
+        color: white;
+        max-width: 800px;
+        min-height: 80vh;
+        padding: 100px 50px 50px 50px;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        margin: 50px auto;
+        align-items: center;
+        position: relative;
+        justify-content: space-around;
+        background: var(--base-color-blue);
+        border: 4px solid var(--base-color-yellow);
+        border-radius: 15px;
+
+        @include for-extra-small {
+            padding: 50px 20px 20px 20px;
+
+        }
+
 
     }
 
 
     .btn {
-        border: 1px solid gray;
-        font-family: 'Courier New', Courier, monospace;
+        border: 1px solid var(--base-color-yellow);
+        border-radius: 3px;
+        text-transform: uppercase;
+
+
+        &:hover:not(:disabled) {
+            background-color: var(--base-color-lightblue);
+            color: white;
+        }
+
+        &.active {
+            background-color: var(--base-color-lightblue);
+        }
+
+        &.inactive {
+            opacity: 30%;
+        }
     }
 
     &__message {
         top: 50px;
-            position: absolute;
-            font-size: 2rem;
-            text-align: center;
+        width: 100%;
+        height: 50px;
+        position: absolute;
+        font-size: 2rem;
+        font-weight: 400;
+        text-align: center;
     }
 
     &__keyboard {
-            align-self: stretch;
+        align-self: stretch;
 
-            &_key {
-                    max-width: 100%;
-                    display: grid;
-                    grid-template-columns: repeat(auto-fit, minmax(75px, 1fr));
-                    gap: 0.5rem
-                
+        &_key {
+
+            max-width: 100%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(75px, 1fr));
+
+            gap: 0.5rem;
+
+            @include for-extra-small {
+                // gap: 0.25rem;
+                // grid-template-columns: repeat(auto-fit, minmax(25px, 1fr));
             }
+        }
     }
+
     &__word {
-        font-family: 'Courier New', Courier, monospace;
         display: flex;
         font-size: 2rem;
+        color: white;
         gap: 0.25em;
-        text-transform: uppercas;
+        text-transform: uppercase;
+
     }
 
 
 
-@include for-extra-small {
+    @include for-extra-small {
 
 
-    &__message {
-        width: 300px;
-        font-size: 20px;
-        top: 50px;
+        &__message {
+            width: 300px;
+            font-size: 20px;
+            top: 50px;
             position: absolute;
             text-align: center;
+        }
     }
-}
 
 }

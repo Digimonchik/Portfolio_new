@@ -1,4 +1,5 @@
 import React, { useState, useContext, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { observer } from "mobx-react";
 import TopBar from "../../Components/TopBar/TopBar";
 import Footer from "../../Components/Footer/Footer";
@@ -32,15 +33,14 @@ const WordDefPage = () => {
 
       <div className="word-page__container">
         <div className="word-page__description">
-          Hi! This app is only aimed at showing the ability to use open source
-          API. All data is taken from{" "}
-          <a
+          Hi! This app is aimed at showing the ability to use open source API.
+          All data is taken from
+          <Link
             style={{ textDecoration: "none", color: "inherit" }}
             href="https://dictionaryapi.dev/"
           >
-            {" "}
-            https://dictionaryapi.dev/{" "}
-          </a>
+            https://dictionaryapi.dev/
+          </Link>
         </div>
         <div className="word-page__find">
           <input

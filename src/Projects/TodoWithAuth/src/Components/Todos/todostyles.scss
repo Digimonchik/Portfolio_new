@@ -1,25 +1,34 @@
+@import '../../../../../Styles/mixins.scss';
+
 .todo-page {
 
-   min-height: 100vh;
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-self: center;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
 
-   &__description {
-    width: 85%;
-    justify-self: center;
-    text-align: center;
-    height: 70px;
-   }
 
-   
+    &__description {
+        width: 85%;
+        justify-self: center;
+        font-size: 1.4rem;
+        text-align: center;
+        font-weight: 300;
+        height: 70px;
+    }
+
+
     &__container {
         margin-top: auto;
         display: flex;
+        height: 80vh;
+
         flex-direction: row;
+        align-items: center;
         justify-content: space-evenly;
-        height: 70%;
+
 
         @include for-extra-small {
             flex-direction: column;
@@ -29,24 +38,29 @@
         }
 
         &_list {
-        padding-top: 50px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 50%;
-
-        @include for-extra-small {
+            padding-top: 50px;
+            display: flex;
+            height: 70%;
+            border-radius: 20px;
+            border: 4px solid var(--base-color-yellow);
             flex-direction: column;
-            justify-content: center;
-            width: 100%;
+            color: white;
+            align-items: center;
+            width: 40%;
+            background: var(--base-color-blue);
+
+            @include for-extra-small {
+                flex-direction: column;
+                justify-content: center;
+                width: 100%;
+            }
+
+            &.redux {}
         }
-        &.redux {
-        }
+
+        &.redux {}
     }
 
-        &.redux {
-        }
-    }
     &__create {
         display: flex;
         width: 500px;
@@ -55,44 +69,61 @@
         justify-content: space-between;
         align-items: center;
 
-            &_input {
-                width: 350px;
-                height: 30px;
-            }
-            &_button {
-                height: 50px;
-                width: 140px;
-                border: 1px solid gray;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                border-radius: 4px;
-                font-size: 12px;
-                cursor: pointer;
+        &_input {
+            width: 350px;
+            height: 30px;
+        }
 
-                
-            }
+        &_button {
+            height: 50px;
+            width: 140px;
+            border: 1px solid gray;
+            background: var(--base-color-yellow);
+            color: white;
+            display: flex;
+            text-transform: uppercase;
+            justify-content: center;
+            align-items: center;
+            border-radius: 4px;
+            font-size: 1rem;
+            cursor: pointer;
+
+
+        }
     }
 
     &__list {
         width: 500px;
         min-height: 300px;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+
         @include for-extra-small {
             min-height: 150px;
         }
     }
+
     &__todo {
-        width: 100%;
+        width: 95%;
         margin-bottom: 10px;
         border: 1px solid rgb(170, 168, 168);
         height: 40px;
+        background-color: var(--base-color-yellow);
         display: flex;
-        justify-content: center;
-        align-items: center;
         border-radius: 5px;
-        
+        align-items: center;
+        justify-content: space-between;
+
+        &_text {
+
+            vertical-align: middle;
+            margin: 0;
+        }
+
         &.green {
-            background-color: lightgreen;
+            background-color: green;
+
         }
 
 
@@ -101,11 +132,13 @@
             width: 500px;
 
         }
+
         &_delete {
             cursor: pointer;
             margin-left: 20px;
             margin-right: 10px;
         }
+
         &_isdone {
             cursor: pointer
         }
@@ -114,40 +147,45 @@
     @include for-extra-small {
 
 
-     &__create {
-        padding-left: 20px;
-        padding-right: 20px;
-        width: 360px;
+        &__create {
+            padding-left: 20px;
+            padding-right: 20px;
+            width: 360px;
 
-        &_input {
-            width: 200px;
+            &_input {
+                width: 200px;
+            }
+
+            &_button {
+                width: 100px;
+            }
         }
-        &_button {
-            width: 100px;
+
+        &__list {
+            width: 340px;
         }
-     }
-     &__list {
-        width: 340px;
-     }
     }
+
     @include for-small {
 
 
         &__create {
-           padding-left: 30px;
-           padding-right: 20px;
-           width: 360px;
-   
-           &_input {
-               width: 200px;
-           }
-           &_button {
-               width: 100px;
-           }
-        }
-        &__list {
-           width: 340px;
-        }
-       }
+            padding-left: 30px;
+            padding-right: 20px;
+            width: 360px;
 
+            &_input {
+                width: 200px;
+            }
+
+            &_button {
+                width: 100px;
+            }
+        }
+
+        &__list {
+            width: 340px;
+        }
     }
+
+}

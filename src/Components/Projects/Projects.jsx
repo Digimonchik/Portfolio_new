@@ -22,12 +22,12 @@ class MyProject {
 
 const projects = [
   new MyProject(
-    "todos",
+    "Todo-lists",
     "/todoApp",
     project_todo,
-    "Todo-lists: React/Redux-toolkit/MERN"
+    "React/Redux-toolkit/MERN"
   ),
-  new MyProject("hangmanGame", "/hangman", hangman, "Hangman game: React/MobX"),
+  new MyProject("Hangman Game", "/hangman", hangman, "React"),
   new MyProject("wordsApp", "/wordsApp", wordsApp, "Dictionary: React/MobX"),
   new MyProject(
     "GifsApp",
