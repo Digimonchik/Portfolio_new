@@ -27,7 +27,7 @@ const TopBar = () => {
         <Link className="topbar__navigation_link" to="/">
           CV
         </Link>
-        <Link className="topbar__navigation_link" to="/">
+        <Link className="topbar__navigation_link" to="/auth">
           Authorization
         </Link>
       </div>

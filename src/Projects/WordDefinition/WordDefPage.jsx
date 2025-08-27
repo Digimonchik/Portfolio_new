@@ -15,6 +15,7 @@ const WordDefPage = () => {
 
   const handleClick = () => {
     wordsStore.getinfo(word);
+    wordsStore.updateHistory(word);
   };
 
   useEffect(() => {
@@ -30,16 +31,15 @@ const WordDefPage = () => {
   return (
     <div className="word-page">
       <TopBar />
-
+      <div className="word-page__header"> Dictionary</div>
       <div className="word-page__container">
         <div className="word-page__description">
-          Hi! This app is aimed at showing the ability to use open source API.
-          All data is taken from
+          This app is made to test open API. All data is taken from
           <Link
             style={{ textDecoration: "none", color: "inherit" }}
             href="https://dictionaryapi.dev/"
           >
-            https://dictionaryapi.dev/
+            {` dictionaryapi.dev`}
           </Link>
         </div>
         <div className="word-page__find">

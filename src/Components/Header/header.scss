@@ -69,11 +69,10 @@
         height: 100%;
 
         &_image {
-            width: 80%;
-            height: 80%;
+            width: 700px;
+            height: 700px;
             position: relative;
             top: 40px;
-            border: 1px solid var(--base-color-yellow);
             background-image: url('./header_photo.png');
             background-size: contain;
             background-position: center;
@@ -84,22 +83,23 @@
                 width: 70px;
                 height: 70px;
                 border-radius: 50%;
-                background: linear-gradient(to right, black, white);
+                background: var(--base-color-gray);
+                // background: linear-gradient(to right, black, white);
                 animation: rotate 1s linear infinite;
 
                 &:nth-child(1) {
                     top: 30px;
-                    left: 210px;
+                    left: 170px;
                 }
 
                 &:nth-child(2) {
                     top: 400px;
-                    left: 90px;
+                    left: 0px;
                 }
 
                 &:nth-child(3) {
                     top: 100px;
-                    right: 140px;
+                    right: 90px;
                 }
             }
 

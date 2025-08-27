@@ -28,13 +28,8 @@ const projects = [
     "React/Redux-toolkit/MERN"
   ),
   new MyProject("Hangman Game", "/hangman", hangman, "React"),
-  new MyProject("wordsApp", "/wordsApp", wordsApp, "Dictionary: React/MobX"),
-  new MyProject(
-    "GifsApp",
-    "/gifsApp",
-    gifsApp,
-    "Gifs search: React/Redux-toolkit"
-  ),
+  new MyProject("Definitions", "/wordsApp", wordsApp, "React/MobX"),
+  new MyProject("Gif's search", "/gifsApp", gifsApp, "React/Redux-toolkit"),
 ];
 
 const Projects = () => {
@@ -66,8 +61,8 @@ const Projects = () => {
               {currentProject.description}
             </p>
           </div>
+          <button className="carousel__button-demo">See more</button>
         </Link>
-        <button className="carousel__button-demo">See more</button>
       </div>
 
       <button
