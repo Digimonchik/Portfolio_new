@@ -5,12 +5,12 @@ const About = () => {
   return (
     <div className="about">
       <div className="circle-decoration white"></div>
-      <div className="circle-decoration yellow"></div>
+      <div className="circle-decoration yellow"></div>{" "}
+      <h1 className="about__container_block_header">About me</h1>
       <div className="about__container">
         <div className="about__container_block cv"></div>
         <div className="about__container_block linkdin"></div>
         <div className="about__container_block text">
-          <h1 className="about__container_block_header">About me</h1>
           <div className="about__container_block_description">
             <p>
               Hello, my name is Dima. I am a junior front-end developer from

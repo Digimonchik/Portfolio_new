@@ -1,3 +1,5 @@
+@import '../../Styles/mixins.scss';
+
 .circle-decoration {
   position: absolute;
   border-radius: 50%;
@@ -26,11 +28,22 @@
   margin: 100px auto;
   width: 90%;
 
+  @include for-extra-small {
+    height: 400px;
+    width: 100%;
+    margin: 0px;
+  }
+
 
   &__container {
     // display: flex;
     height: 100%;
     position: relative;
+
+    @include for-extra-small {
+      width: 100%;
+    }
+
 
     &_block {
       flex-direction: column;
@@ -45,6 +58,10 @@
         margin-bottom: 20px;
         text-transform: uppercase;
         font-weight: 400;
+
+        @include for-extra-small {
+          font-size: 0.6rem;
+        }
       }
 
       &_description {
@@ -54,6 +71,12 @@
         font-size: 1.8rem;
         color: white;
         padding: 0 40px 40px;
+
+        @include for-extra-small {
+          font-size: 0.8rem;
+          padding: 10px;
+          margin: 0px;
+        }
 
         ;
       }
@@ -67,6 +90,16 @@
         background: url('./cv.png');
         background-color: var(--base-color-blue);
         background-position: center;
+
+        @include for-extra-small {
+
+          width: 95px;
+          height: 112px;
+          border-radius: 4px;
+          top: -50px;
+        }
+
+
       }
 
       &.linkdin {
@@ -79,6 +112,13 @@
         background-color: var(--base-color-blue);
         background-position: center;
         background-size: contain;
+
+        @include for-extra-small {
+          width: 60px;
+          height: 60px;
+          left: 40px;
+          border-radius: 3px;
+        }
       }
 
       &.text {
@@ -92,6 +132,11 @@
         display: flex;
         flex-direction: column;
         justify-content: start;
+
+        @include for-extra-small {
+          width: 245px;
+          height: 370px;
+        }
       }
     }
   }

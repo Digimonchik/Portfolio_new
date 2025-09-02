@@ -4,6 +4,7 @@
     justify-content: end;
     align-items: center;
     height: 70px;
+    position: relative;
 
 
     &__navigation {
@@ -12,8 +13,12 @@
         align-items: center;
         width: 40%;
         padding: 0 20px;
-
         margin-right: 5rem;
+
+        @include for-extra-small {
+            width: 70%;
+            margin: 0px;
+        }
 
         &_link {
             text-decoration: none;
@@ -21,6 +26,11 @@
             font-size: 2rem;
             font-weight: lighter;
             color: white;
+
+            @include for-extra-small {
+                font-size: 1rem;
+                text-transform: uppercase;
+            }
 
             &:after {
                 content: '';

@@ -1,29 +1,30 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
-// const API_KEY = "RSWr8bOd94FA1CdAWncLiQH7DoKgiVD4";
-// const BASE_URL = "https://api.giphy.com/v1/gifs";
-
-// Асинхронный экшен для получения гифок
-const fetchFilms = createAsyncThunk(
-  "films/fetchFilms",
-  async (searchValue, thunkAPI) => {
-    try {
-      const response = await fetch(
-        `${BASE_URL}/search?api_key=${API_KEY}&q=${searchValue}&limit=30&offset=1`
-      );
-
-      if (!response.ok) {
-        throw new Error("Access error");
+const fetchFilms = createAsyncThunk("films/fetchFilms", async (_, thunkAPI) => {
+  const token = process.env.REACT_APP_TMDB_TOKEN;
+  try {
+    const response = await fetch(
+      "https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1",
+      {
+        headers: {
+          accept: "application/json",
+          Authorization: `Bearer ${token}`,
+        },
       }
+    );
 
-      const data = await response.json();
-      console.log(data);
-      return data.data;
-    } catch (error) {
-      return thunkAPI.rejectWithValue(error.message);
+    if (!response.ok) {
+      throw new Error("Access error");
     }
+
+    const data = await response.json();
+    console.log(data);
+    return data.results; // TMDB кладёт список фильмов в results
+  } catch (error) {
+    console.log(error);
+    return thunkAPI.rejectWithValue(error.message);
   }
-);
+});
 
 const cinemaSlice = createSlice({
   name: "films",
@@ -34,7 +35,7 @@ const cinemaSlice = createSlice({
   },
 
   reducers: {
-    removefilms(state) {
+    removeFilms(state) {
       state.films = [];
       state.status = "idle";
       state.error = null;
@@ -48,8 +49,7 @@ const cinemaSlice = createSlice({
       })
       .addCase(fetchFilms.fulfilled, (state, action) => {
         state.status = "succeeded";
-        console.log(action.payload);
-        state.gifs = action.payload;
+        state.films = action.payload;
       })
       .addCase(fetchFilms.rejected, (state, action) => {
         state.status = "failed";

@@ -11,7 +11,8 @@ import TodoPage from "../Projects/TodoWithAuth/src/Components/Todos/TodoPage";
 import WordDefPage from "../Projects/WordDefinition/WordDefPage";
 import ContactsPage from "./Contacts/ContactsPage";
 import GifsPage from "../Projects/GifsApp/GifsPage";
-
+import Cinema from "../Projects/Cinema/Cinema.tsx";
+import MovieDetails from "../Projects/Cinema/MovieDetails.tsx";
 const App = () => {
   const { authStore } = useContext(authContext);
 
@@ -34,6 +35,8 @@ const App = () => {
           <Route path="/auth/login" element={<LoginForm />} />
           <Route path="/auth/registration" element={<RegistrationForm />} />
         </Route>
+        <Route path="movies" element={<Cinema />}></Route>
+        <Route path="movies/:id" element={<MovieDetails />} />
         <Route path="gifsApp" element={<GifsPage />}></Route>
         <Route path="contacts" element={<ContactsPage />}></Route>
       </Routes>

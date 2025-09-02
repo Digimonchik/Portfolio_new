@@ -1,3 +1,5 @@
+@import '../../Styles/mixins.scss';
+
 .skill {
     width: 270px;
     height: 270px;
@@ -6,12 +8,26 @@
     align-items: center;
     justify-content: center;
     border-radius: 29px;
-
     background: var(--base-color-blue);
+
+    @include for-extra-small {
+        width: 100px;
+        height: 100px;
+        border-radius: 4px;
+        margin: 5px;
+        ;
+
+
+    }
 
     &__image {
         width: 140px;
         height: 140px;
+
+        @include for-extra-small {
+            width: 60px;
+            height: 60px;
+        }
 
         &:first-child {
             border-radius: 10px;

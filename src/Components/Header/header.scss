@@ -1,3 +1,4 @@
+@import '../../Styles/mixins.scss';
 // @keyframes rotate {
 //     0% {
 //         transform: rotate(0deg);
@@ -14,10 +15,18 @@
     flex-direction: row;
     height: 800px;
 
+    @include for-extra-small {
+        height: 198px;
+    }
+
 
     &__info {
         width: 50%;
         height: 100%;
+
+        @include for-extra-small {
+            position: relative;
+        }
 
         &_logo {
             width: 220px;
@@ -27,13 +36,28 @@
             position: relative;
             top: -80px;
             left: 120px;
+
+            @include for-extra-small {
+                width: 80px;
+                height: 75px;
+                left: 0px;
+                top: -70px;
+                position: absolute;
+            }
         }
 
         &_description {
             font-size: 2rem;
             color: white;
             margin-bottom: 20px;
-            margin-left: 200px
+            margin-left: 200px;
+
+            @include for-extra-small {
+                font-size: 0.8rem;
+                margin-left: 20px;
+                margin-top: 20px;
+                margin-bottom: 0px;
+            }
         }
 
         &_name {
@@ -42,6 +66,12 @@
             text-transform: uppercase;
             ;
             margin-left: 200px;
+
+            @include for-extra-small {
+                font-size: 1.5rem;
+                margin-left: 20px;
+                ;
+            }
         }
 
         &_button {
@@ -57,6 +87,16 @@
             cursor: pointer;
             font-size: 1.2rem;
             margin-left: 200px;
+
+            @include for-extra-small {
+                margin-left: 20px;
+                width: 100px;
+                height: 15px;
+                font-size: 0.6rem;
+                padding: 3px;
+                border-radius: 2px;
+
+            }
 
             &:hover {
                 background-color: #0056b3;
@@ -78,6 +118,13 @@
             background-position: center;
             background-repeat: no-repeat;
 
+            @include for-extra-small {
+                width: 180px;
+                height: 180px;
+                top: -10px;
+
+            }
+
             & span {
                 position: absolute;
                 width: 70px;
@@ -87,19 +134,31 @@
                 // background: linear-gradient(to right, black, white);
                 animation: rotate 1s linear infinite;
 
+                @include for-extra-small {
+                    width: 20px;
+                    height: 20px;
+
+                }
+
                 &:nth-child(1) {
                     top: 30px;
                     left: 170px;
+
+                    @include for-extra-small {
+                        top: 15px;
+                        left: 30px;
+
+                    }
                 }
 
                 &:nth-child(2) {
-                    top: 400px;
-                    left: 0px;
+                    top: 20px;
+                    left: 135px;
                 }
 
                 &:nth-child(3) {
                     top: 100px;
-                    right: 90px;
+                    left: 0;
                 }
             }
 
