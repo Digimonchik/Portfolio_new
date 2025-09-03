@@ -15,9 +15,13 @@
         height: 100px;
         border-radius: 4px;
         margin: 5px;
-        ;
+    }
 
-
+    @include for-small {
+        width: 150px;
+        height: 150px;
+        border-radius: 4px;
+        margin: 5px;
     }
 
     &__image {

@@ -6,8 +6,7 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-self: center;
+    justify-content: space-between;
 
 
     &__description {
@@ -24,17 +23,19 @@
         margin-top: auto;
         display: flex;
         height: 80vh;
-
         flex-direction: row;
         align-items: center;
-        justify-content: space-evenly;
-
+        justify-content: center;
 
         @include for-extra-small {
             flex-direction: column;
             justify-content: center;
             height: 70%;
-            margin-bottom: 40px;
+            margin: 50px 0;
+        }
+
+        @include for-small {
+            width: 100%;
         }
 
         &_list {
@@ -53,6 +54,10 @@
                 flex-direction: column;
                 justify-content: center;
                 width: 100%;
+            }
+
+            @include for-small {
+                width: 70%;
             }
 
             &.redux {}

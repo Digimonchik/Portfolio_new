@@ -9,25 +9,25 @@ const Footer = () => {
       <div className="footer__contacts">
         <div className="footer__header">Contacts</div>
         <Link to="/contacts" className="footer__link">
-          see contacts
+          insta: dilogvin
         </Link>
         <Link to="/" className="footer__link">
-          return to main page
+          github: digimonchyk
         </Link>
         <Link to="/" className="footer__link">
-          return to main page
+          telegram: dilogvin
         </Link>
       </div>
       <div className="footer__contacts">
         <div className="footer__header">Navigation</div>
         <Link to="/contacts" className="footer__link">
-          see contacts
-        </Link>
-        <Link to="/" className="footer_link">
-          return to main page
+          Homepage
         </Link>
         <Link to="/" className="footer__link">
-          return to main page
+          Authorization
+        </Link>
+        <Link to="/" className="footer__link">
+          Contacts
         </Link>
       </div>
       <div className="footer__logo">

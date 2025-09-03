@@ -6,23 +6,35 @@
     height: 70px;
     position: relative;
 
+    @include for-extra-small {
+        justify-content: end;
+        justify-self: center;
+        // padding-right: 10%;
+        width: 375px;
+    }
+
+    @include for-small {
+        width: 600px;
+
+    }
+
 
     &__navigation {
         display: flex;
-        justify-content: space-between;
+        justify-content: end;
         align-items: center;
         width: 40%;
         padding: 0 20px;
         margin-right: 5rem;
 
         @include for-extra-small {
-            width: 70%;
-            margin: 0px;
+            width: 200px;
+            margin-right: 10%;
         }
 
         &_link {
             text-decoration: none;
-            margin-right: 20px;
+            margin-left: 40px;
             font-size: 2rem;
             font-weight: lighter;
             color: white;

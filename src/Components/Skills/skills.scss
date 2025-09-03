@@ -24,5 +24,9 @@
       align-items: center;
       justify-content: center;
     }
+
+    @include for-small {
+      max-width: 900px;
+    }
   }
 }

@@ -1,3 +1,5 @@
+@import '../../Styles/mixins.scss';
+
 .footer {
     background-color: var(--base-color-blue);
     width: 100%;
@@ -17,6 +19,18 @@
         padding: 20px;
         justify-content: space-around;
 
+        @include for-extra-small {
+
+            padding: 5px;
+            padding-right: 10px;
+            box-sizing: border-box;
+            margin-left: 30px;
+            width: 50%;
+            height: 60%;
+
+
+        }
+
         &:first-child {
             border-right: 2px solid white
         }
@@ -28,6 +42,10 @@
         color: white;
         text-decoration: none;
 
+        @include for-extra-small {
+            font-size: 1rem;
+        }
+
         &:hover {
             text-decoration: underline;
         }
@@ -37,6 +55,10 @@
         font-size: 1.5rem;
         font-weight: 400;
         text-decoration: underline;
+
+        @include for-extra-small {
+            font-size: 1rem;
+        }
     }
 
     &__image {
@@ -45,6 +67,14 @@
         object-fit: contain;
         margin-right: 10px;
         transition: transform 0.3s ease;
+
+        @include for-extra-small {
+            width: 80px;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            height: 80px;
+        }
 
         &:hover {
             transform: scale(1.1);

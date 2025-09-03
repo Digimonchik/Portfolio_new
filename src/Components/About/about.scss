@@ -27,11 +27,16 @@
   height: 940px;
   margin: 100px auto;
   width: 90%;
+  justify-self: center;
 
   @include for-extra-small {
-    height: 400px;
-    width: 100%;
+    height: 450px;
+    max-width: 375px;
     margin: 0px;
+  }
+
+  @include for-small {
+    max-width: 600px;
   }
 
 
@@ -42,7 +47,12 @@
 
     @include for-extra-small {
       width: 100%;
+      padding: 20px;
+      position: relative;
+      height: 400px;
     }
+
+    @include for-small {}
 
 
     &_block {
@@ -50,6 +60,10 @@
       justify-content: center;
       align-items: center;
       border-radius: 20px;
+
+      @include for-extra-small {
+        border-radius: 4px;
+      }
 
       &_header {
         font-size: 3rem;
@@ -73,8 +87,14 @@
         padding: 0 40px 40px;
 
         @include for-extra-small {
-          font-size: 0.8rem;
-          padding: 10px;
+          font-size: 0.67rem;
+          padding: 20px;
+          margin: 0px;
+        }
+
+        @include for-small {
+          font-size: 0.74rem;
+          padding: 20px;
           margin: 0px;
         }
 
@@ -96,7 +116,14 @@
           width: 95px;
           height: 112px;
           border-radius: 4px;
-          top: -50px;
+          top: -20px;
+          left: 20px;
+          background-size: cover;
+        }
+
+        @include for-small {
+          width: 145px;
+          height: 165px;
         }
 
 
@@ -106,7 +133,7 @@
         width: 256px;
         height: 256px;
         position: absolute;
-        bottom: 0;
+        bottom: 50px;
         left: 150px;
         background: url('./linkdin.png');
         background-color: var(--base-color-blue);
@@ -123,10 +150,10 @@
 
       &.text {
         width: 1093px;
-        height: 775px;
+        height: 600px;
         position: absolute;
         background: var(--base-color-blue);
-        bottom: 0;
+        bottom: 100px;
         right: 0;
         font-weight: 300;
         display: flex;
@@ -136,6 +163,13 @@
         @include for-extra-small {
           width: 245px;
           height: 370px;
+          bottom: 20px;
+          right: 10px;
+        }
+
+        @include for-small {
+          width: 350px;
+          height: 330px;
         }
       }
     }
@@ -144,5 +178,5 @@
 
 p {
   margin: 0;
-  margin-top: 20px;
+  margin-top: 10px;
 }

@@ -12,8 +12,7 @@ const TodoPage = () => {
       <TopBar></TopBar>
       <div className="todo-page__container">
         <TodoListRedux></TodoListRedux>
-
-        <CreateTodo></CreateTodo>
+        {/* <CreateTodo></CreateTodo> */}
       </div>
       <Footer></Footer>
     </div>

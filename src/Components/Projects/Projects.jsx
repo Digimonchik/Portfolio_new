@@ -61,7 +61,7 @@ const Projects = () => {
               {currentProject.description}
             </p>
           </div>
-          <button className="carousel__button-demo">See more</button>
+          {/* <button className="carousel__button-demo">See more</button> */}
         </Link>
       </div>
 

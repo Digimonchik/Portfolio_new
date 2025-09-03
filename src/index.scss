@@ -13,9 +13,7 @@
   font-family: 'Candara', sans-serif;
 }
 
-.homepage {
-  width: 100%;
-}
+
 
 
 #root {
@@ -46,9 +44,7 @@
   margin: 0px auto;
   overflow: hidden;
 
-  @include for-extra-small {
-    width: 375px;
-  }
+
 
 
   @include for-large {

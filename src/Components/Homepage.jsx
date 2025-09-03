@@ -5,7 +5,7 @@ import Skills from "./Skills/Skills";
 import Portfolio from "./Layouts/Portfolio";
 import TopBar from "./TopBar/TopBar";
 import Footer from "./Footer/Footer";
-import Projects from "./Projects/Projects";
+import Projects from "./Projects/Projects_carousel";
 
 const Homepage = () => {
   return (

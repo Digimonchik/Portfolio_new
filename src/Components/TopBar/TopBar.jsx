@@ -3,6 +3,7 @@ import { authContext } from "../../index";
 import { observer } from "mobx-react";
 import { Link } from "react-router-dom";
 import Cookies from "js-cookie";
+import cv from "../../Documents/CV.pdf";
 
 const TopBar = () => {
   const [user, setUser] = useState("");
@@ -24,12 +25,13 @@ const TopBar = () => {
         <Link className="topbar__navigation_link" to="/">
           Home
         </Link>
-        <Link className="topbar__navigation_link" to="/">
+        <a href={cv} className="topbar__navigation_link">
           CV
-        </Link>
-        <Link className="topbar__navigation_link" to="/auth">
+        </a>
+
+        {/* <Link className="topbar__navigation_link" to="/auth">
           Authorization
-        </Link>
+        </Link> */}
       </div>
     </div>
   );
