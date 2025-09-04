@@ -2,14 +2,18 @@
 
 .carousel {
     position: relative;
-    width: 1280px;
+    max-width: 1280px;
     margin: 150px auto;
     text-align: center;
 
     @include for-extra-small {
-        width: 375px;
+        max-width: 375px;
         margin: 50px auto;
-        ;
+    }
+
+    @include for-small {
+        max-width: 550px;
+        margin: 50px auto;
 
     }
 
@@ -32,6 +36,11 @@
             height: 220px;
             padding: 10px;
             justify-self: center;
+        }
+
+        @include for-small {
+            width: 340px * 1.6;
+            height: 220px * 1.6;
         }
     }
 

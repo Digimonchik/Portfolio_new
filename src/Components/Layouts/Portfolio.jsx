@@ -32,47 +32,31 @@ const Portfolio = () => {
     <div className="portfolio">
       <h1 className="portfolio__header">Layouts</h1>
 
-      {/* Десктопная сетка */}
-      <div className="portfolio__container portfolio__container--desktop">
+      <Swiper
+        modules={[Pagination]}
+        pagination={{ clickable: true }}
+        spaceBetween={20}
+        loop={true}
+        breakpoints={{
+          0: { slidesPerView: 2 }, // телефоны
+          600: { slidesPerView: 3 }, // планшеты
+          1024: { slidesPerView: 3 }, // ноуты
+          1366: { slidesPerView: 4 }, // десктопы
+        }}
+      >
         {layouts.map((layout, idx) => (
-          <Link to={layout.link} key={idx}>
+          <SwiperSlide key={idx}>
             <div className="layout">
-              <div
-                style={{ backgroundImage: `url(${layout.img})` }}
-                className="layout__image"
-              ></div>
-            </div>
-          </Link>
-        ))}
-      </div>
-
-      {/* Мобильная/планшетная карусель */}
-      <div className="portfolio__container portfolio__container--mobile">
-        <Swiper
-          modules={[Pagination]}
-          pagination={{ clickable: true }}
-          spaceBetween={20}
-          loop={true}
-          breakpoints={{
-            0: { slidesPerView: 2 }, // до 600px
-            600: { slidesPerView: 3 }, // от 600px
-            1366: { slidesPerView: 4 }, // от 1024px
-          }}
-        >
-          {layouts.map((layout, idx) => (
-            <SwiperSlide key={idx}>
               <Link to={layout.link}>
-                <div className="layout">
-                  <div
-                    style={{ backgroundImage: `url(${layout.img})` }}
-                    className="layout__image"
-                  ></div>
-                </div>
+                <div
+                  style={{ backgroundImage: `url(${layout.img})` }}
+                  className="layout__image"
+                ></div>
               </Link>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </div>
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
     </div>
   );
 };

@@ -1,3 +1,5 @@
+@import '../../Styles/mixins.scss';
+
 .movie {
     &__page {
         width: 100%;
@@ -6,6 +8,7 @@
         flex-direction: column;
         align-items: center;
         position: relative;
+        justify-content: center;
 
     }
 
@@ -31,9 +34,22 @@
         padding: 10px;
         align-items: start;
 
+        @include for-extra-small {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        @include for-small {
+            flex-direction: row;
+        }
+
 
         &_container {
             display: flex;
+
+            @include for-extra-small {
+                flex-direction: column;
+            }
         }
 
         &_description {
@@ -43,6 +59,12 @@
             text-align: justify;
             z-index: 1;
             color: white;
+
+            @include for-extra-small {
+                padding: 0 5px;
+                font-size: 1.3rem;
+                text-align: center;
+            }
         }
 
         &_image {
@@ -69,8 +91,12 @@
             font-size: 1.5rem;
             color: white;
             margin: 10px 0;
-            text-decoration: none;
             text-transform: uppercase;
+
+            @include for-extra-small {
+                width: 80%;
+
+            }
 
             &.rating {
                 background: var(--base-color-yellow);
@@ -90,6 +116,14 @@
             font-size: 3rem;
             display: flex;
             flex-direction: column;
+
+            @include for-extra-small {
+                width: 100%;
+                height: 150px;
+                justify-content: center;
+                align-items: center;
+                margin: 30px 0;
+            }
         }
 
         ;
@@ -103,6 +137,11 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+
+        @include for-extra-small {
+            margin: 0;
+            justify-self: center;
+        }
     }
 
     &__background {
@@ -127,6 +166,10 @@
             display: flex;
             flex-direction: column;
             align-self: center;
+
+            @include for-extra-small {
+                margin: 0;
+            }
         }
 
         &_title {

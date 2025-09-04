@@ -19,7 +19,6 @@
         text-align: center;
         font-size: 1.5rem;
         color: white;
-
         width: 80%;
         line-height: normal;
     }
@@ -27,9 +26,10 @@
     &__container {
         margin: 50px;
         display: flex;
-        padding: 50px;
+        padding: 10px;
         min-height: 70vh;
-        width: 900px;
+        width: 95%;
+        max-width: 900px;
         flex-direction: column;
         align-items: center;
         background: var(--base-color-blue);
@@ -39,13 +39,15 @@
 
     &__find {
         display: flex;
-        width: 500px;
+        max-width: 500px;
+        width: 100%;
         min-height: 100px;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: center;
 
         &_input {
-            width: 350px;
+            width: 60%;
+            max-width: 400px;
             height: 40px;
 
             &:focus {
@@ -56,7 +58,7 @@
 
         &_button {
             height: 50px;
-            width: 140px;
+            width: 30%;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -72,7 +74,8 @@
     }
 
     &__transcript {
-        width: 500px;
+        width: 95%;
+        max-width: 500px;
         color: white;
         height: 100px;
         display: flex;
@@ -156,7 +159,7 @@
 
         &_button {
             color: white;
-            width: 500px;
+            width: 80%;
             height: 30px;
             position: relative;
             text-align: center;

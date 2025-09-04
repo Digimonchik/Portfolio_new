@@ -29,49 +29,48 @@ const TodoListRedux = () => {
   };
 
   return (
-    <div className="todo-page__container_list redux">
-      <div className="todo-page__description">
+    <div className="todo-page__app">
+      <div className="todo-page__app_description">
         This todo-list is made using Redux-toolkit. Data is saved in local
         storage
       </div>
-      <div className="todo-page__create">
+      <div className="todo-page__app_create">
         <input
-          className="todo-page__create_input"
+          className="todo-page__app_create_input"
           type="text"
           value={inputValue}
           onChange={(event) => setValue(event.target.value)}
         ></input>
         <button
-          className="todo-page__create_button"
+          className="todo-page__app_create_button"
           onClick={() => handleClick(inputValue)}
         >
           Create task
         </button>
       </div>
-      <div className="todo-page__list">
-        <div className="todo-page__list">
-          {storedTodos.length > 0 &&
-            storedTodos.map((el) => (
+
+      <div className="todo-page__app_list">
+        {storedTodos.length > 0 &&
+          storedTodos.map((el) => (
+            <div
+              className={`todo-page__app_todo ${el.isDone ? "green" : ""}`}
+              key={el.id}
+            >
+              <p className="todo-page__app_todo_text">{el.value}</p>
+              <input
+                className="todo-page__app_todo_isdone"
+                type="checkbox"
+                checked={el.isDone}
+                onChange={() => togleDone(el.id)}
+              />
               <div
-                className={`todo-page__todo ${el.isDone ? "green" : ""}`}
-                key={el.id}
+                className="todo-page__app_todo_delete"
+                onClick={() => remove(el.id)}
               >
-                <p className="todo-page__todo_text">{el.value}</p>
-                <input
-                  className="todo-page__todo_isdone"
-                  type="checkbox"
-                  checked={el.isDone}
-                  onChange={() => togleDone(el.id)}
-                />
-                <div
-                  className="todo-page__todo_delete"
-                  onClick={() => remove(el.id)}
-                >
-                  x
-                </div>
+                x
               </div>
-            ))}
-        </div>
+            </div>
+          ))}
       </div>
     </div>
   );

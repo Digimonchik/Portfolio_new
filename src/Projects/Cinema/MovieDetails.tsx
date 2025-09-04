@@ -52,15 +52,15 @@ const MovieDetails: React.FunctionComponent<IMovieDetailsProps> = (props) => {
 
                 <div className='movie__info'>
 
-                    <div className="movie__info_buttons">
+                    <div className="movie__info_buttons"><a
+                        href={details?.homepage}
+                        // target="_blank"
+                        // rel="noopener noreferrer"
+                        className="movie__info_link"
+                    >movie page</a>
                         <div className="movie__info_link rating">Rating: {details.vote_average}</div>
                         <div className='movie__info_link imdb'>IMDB link</div>
-                        <a
-                            href={details?.homepage}
-                            // target="_blank"
-                            // rel="noopener noreferrer"
-                            className="movie__info_link"
-                        >movie page</a>
+
 
                     </div><div className="movie__info_description">{details.overview}</div></div>
             </div>

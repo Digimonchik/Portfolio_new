@@ -10,13 +10,10 @@
         justify-content: end;
         justify-self: center;
         // padding-right: 10%;
-        width: 375px;
-    }
-
-    @include for-small {
-        width: 600px;
 
     }
+
+    @include for-small {}
 
 
     &__navigation {
