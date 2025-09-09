@@ -29,21 +29,18 @@ class MyProject {
 }
 
 const projects = [
-  new MyProject(
-    "Todo-lists",
-    "/todoApp",
-    project_todo,
-    "React/Redux-toolkit/MERN"
-  ),
+  new MyProject("Movies to watch", "/movies", movies, "React/Redux-toolkit"),
+  new MyProject("Gif's search", "/gifsApp", gifsApp, "React/Redux-toolkit"),
+  new MyProject("Todo-list", "/todoApp", project_todo, "React/Redux-toolkit"),
   new MyProject("Hangman Game", "/hangman", hangman, "React"),
   new MyProject("Definitions", "/wordsApp", wordsApp, "React/MobX"),
-  new MyProject("Gif's search", "/gifsApp", gifsApp, "React/Redux-toolkit"),
-  new MyProject("Movies to watch", "/movies", movies, "React/Redux-toolkit"),
 ];
 
 const Projects = () => {
   return (
     <div className="carousel">
+      <h1 className="carousel__header">Projects</h1>
+
       <Swiper
         modules={[Navigation, Pagination]}
         navigation
@@ -52,6 +49,10 @@ const Projects = () => {
         slidesPerView={1}
         loop={true}
         className="carousel__swiper"
+        autoplay={{
+          delay: 300, // задержка между слайдами (в мс)
+          disableOnInteraction: true, // не останавливать после ручного свайпа
+        }}
       >
         {projects.map((project, idx) => (
           <SwiperSlide key={idx}>

@@ -11,9 +11,9 @@
     &__container {
         margin-top: auto;
         display: flex;
-        height: 80vh;
+        min-height: 80vh;
         flex-direction: row;
-        align-items: center;
+        align-items: start;
         width: 100%;
         justify-content: center;
     }
@@ -21,6 +21,7 @@
 
     &__app {
         background: var(--base-color-blue);
+        margin: 10% 0;
         display: flex;
         width: 95%;
         max-width: 700px;
@@ -80,7 +81,7 @@
             width: 95%;
             margin-bottom: 10px;
             border: 1px solid rgb(170, 168, 168);
-            height: 40px;
+            min-height: 40px;
             background-color: var(--base-color-yellow);
             display: flex;
             border-radius: 5px;
@@ -89,9 +90,13 @@
             padding-left: 15px;
 
             &_text {
-                width: 100%;
+                width: 80%;
+                ;
                 margin-left: 10px;
                 margin: 0;
+                overflow-wrap: break-word;
+                line-height: 150%;
+                word-wrap: break-word;
                 max-width: 500px;
                 vertical-align: middle;
             }

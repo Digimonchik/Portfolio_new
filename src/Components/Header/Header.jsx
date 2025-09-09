@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 
 class Header extends Component {
   render() {
+    const { onAboutClick } = this.props;
+
     return (
       <div className="page-header">
         <div className="page-header__info">
@@ -13,10 +15,17 @@ class Header extends Component {
           </div>
           <h1 className="page-header__info_name">Dmytro Lohvynenko</h1>
 
-          <Link to="/cv">
-            <button className="page-header__info_button">Contact me</button>
-          </Link>
+          <div className="page-header__buttons">
+            {/* <Link to="/cv">
+              <button className="page-header__info_button">Contact me</button>
+            </Link> */}
+
+            <button className="page-header__info_button" onClick={onAboutClick}>
+              About me
+            </button>
+          </div>
         </div>
+
         <div className="page-header__img">
           <div className="page-header__img_image">
             <span></span>
@@ -28,4 +37,5 @@ class Header extends Component {
     );
   }
 }
+
 export default Header;

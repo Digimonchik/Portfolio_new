@@ -18,13 +18,14 @@ const pages = {
   template_3: "https://digimonchik.github.io/layout-cards/",
   template_4: "https://digimonchik.github.io/Slider/",
   template_5: "https://digimonchik.github.io/template_4/",
+  template_6: "https://w-ts.com.ua/",
 };
 
 const layouts = [
   { img: landing_first, link: pages.template_1 },
   { img: landing_second, link: pages.template_2 },
-  { img: landing_third, link: pages.template_3 },
-  { img: landing_fifth, link: pages.template_5 },
+  { img: landing_third, link: pages.template_5 },
+  { img: landing_fifth, link: pages.template_6 },
 ];
 
 const Portfolio = () => {

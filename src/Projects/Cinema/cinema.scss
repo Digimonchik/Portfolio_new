@@ -21,6 +21,7 @@
 
     &__container {
         width: 95%;
+        min-height: 100vh;
         height: 100%;
         display: flex;
         flex-direction: row;

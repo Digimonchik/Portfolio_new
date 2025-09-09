@@ -28,6 +28,7 @@ const MovieDetails: React.FunctionComponent<IMovieDetailsProps> = (props) => {
             dispatch(fetchMovieFullInfo(parseInt(id)))
             console.log(id)
             console.log(details?.homepage)
+            console.log(details?.imdb_id)
 
         }
     }, [dispatch, id])
@@ -59,7 +60,7 @@ const MovieDetails: React.FunctionComponent<IMovieDetailsProps> = (props) => {
                         className="movie__info_link"
                     >movie page</a>
                         <div className="movie__info_link rating">Rating: {details.vote_average}</div>
-                        <div className='movie__info_link imdb'>IMDB link</div>
+                        <a href={`https://www.imdb.com/title/${details.imdb_id}`} className='movie__info_link imdb'>IMDB link</a>
 
 
                     </div><div className="movie__info_description">{details.overview}</div></div>

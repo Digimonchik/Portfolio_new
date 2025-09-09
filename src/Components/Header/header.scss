@@ -167,7 +167,11 @@
                 @include for-extra-small {
                     width: 20px;
                     height: 20px;
+                }
 
+                @include for-small {
+                    width: 30px;
+                    height: 30px;
                 }
 
                 &:nth-child(1) {
@@ -177,18 +181,44 @@
                     @include for-extra-small {
                         top: 15px;
                         left: 30px;
+                    }
+
+                    @include for-small {
+                        top: 30px;
+                        left: 50px;
 
                     }
                 }
 
                 &:nth-child(2) {
-                    top: 20px;
-                    left: 135px;
+                    top: 70px;
+                    left: 510px;
+
+                    @include for-extra-small {
+                        top: 20px;
+                        left: 135px;
+                    }
+
+                    @include for-small {
+                        top: 40px;
+                        left: 225px;
+
+                    }
                 }
 
                 &:nth-child(3) {
-                    top: 100px;
-                    left: 0;
+                    top: 400px;
+
+                    @include for-extra-small {
+                        top: 100px;
+                        left: 0;
+                    }
+
+                    @include for-small {
+                        top: 160px;
+                        left: 0px;
+
+                    }
                 }
             }
 

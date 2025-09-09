@@ -37,7 +37,7 @@ const Cinema: React.FunctionComponent<ICinemaProps> = () => {
 
     return <div className='movies__page'>
         <TopBar></TopBar>
-        <div className='movies__header'>Most watched movies</div>
+        <div className='movies__header'>Top 20 most popular shows up to date</div>
         <div className='movies__container'>
             {storedFilms.length > 0 && storedFilms.map((el: any, index) =>
 

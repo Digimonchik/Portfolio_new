@@ -8,27 +8,30 @@ const Footer = () => {
     <div className="footer">
       <div className="footer__contacts">
         <div className="footer__header">Contacts</div>
-        <Link to="/contacts" className="footer__link">
+        <Link
+          to="https://www.instagram.com/dilogvin?igsh=NGRsd2VvMTY3bnpl&utm_source=qr"
+          className="footer__link"
+        >
           insta: dilogvin
         </Link>
-        <Link to="/" className="footer__link">
+        <Link to="https://github.com/Digimonchik" className="footer__link">
           github: digimonchyk
         </Link>
-        <Link to="/" className="footer__link">
+        <Link to="https://t.me/dilogvin" className="footer__link">
           telegram: dilogvin
         </Link>
       </div>
       <div className="footer__contacts">
         <div className="footer__header">Navigation</div>
-        <Link to="/contacts" className="footer__link">
+        <Link to="/" className="footer__link">
           Homepage
         </Link>
-        <Link to="/" className="footer__link">
+        {/* <Link to="/" className="footer__link">
           Authorization
         </Link>
         <Link to="/" className="footer__link">
           Contacts
-        </Link>
+        </Link> */}
       </div>
       <div className="footer__logo">
         <img
