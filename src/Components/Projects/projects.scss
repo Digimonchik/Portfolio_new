@@ -11,10 +11,11 @@
         color: white;
         font-weight: 400;
         margin-bottom: 20px;
+        text-transform: uppercase;
 
         @include for-extra-small {
             font-size: 0.8rem;
-            text-transform: uppercase;
+
         }
     }
 
@@ -33,7 +34,8 @@
         border: 2px solid var(--base-color-yellow);
         border-radius: 20px;
         padding: 40px;
-        height: 750px;
+        width: 1200px;
+        height: 650px;
         background: var(--base-color-blue);
         box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
         display: flex;
@@ -82,8 +84,8 @@
     }
 
     &__image {
-        width: 700px;
-        height: 400px;
+        width: 600px;
+        height: 300px;
         object-fit: cover;
         border-radius: 6px;
         border-radius: 15px;
@@ -195,4 +197,11 @@
             background: #000;
         }
     }
+}
+
+.swiper-slide {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
 }

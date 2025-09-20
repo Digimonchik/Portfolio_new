@@ -16,14 +16,12 @@
 
     @include for-extra-small {
         max-width: 400px;
-
     }
 
     @include for-small {
         width: 90%;
         max-width: 700px;
     }
-
 
     &__header {
         font-size: 2.5rem;
@@ -36,19 +34,17 @@
         @include for-extra-small {
             font-size: 1rem;
             margin-bottom: 5px;
-
         }
     }
 }
 
 .layout {
-
-    aspect-ratio: 3 / 5;
+    position: relative;
+    width: 100%;
+    padding-top: calc(100% * 5 / 3); // вместо aspect-ratio: 3 / 5
     border: 5px solid var(--base-color-blue);
     border-radius: 15px;
     overflow: hidden;
-
-    width: 100%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2),
         0 6px 20px rgba(0, 0, 0, 0.19);
     cursor: pointer;
@@ -59,14 +55,12 @@
     }
 
     &__image {
+        position: absolute;
+        inset: 0;
         width: 100%;
         height: 100%;
-        justify-self: center;
-        align-self: center;
         background-position: center;
-        justify-self: center;
         background-size: cover;
-
     }
 }
 
@@ -85,4 +79,6 @@
     opacity: 1;
 }
 
-.swiper-slide {}
+.swiper-slide {
+    flex-shrink: 0; // Safari не будет сжимать
+}

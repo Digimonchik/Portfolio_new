@@ -45,7 +45,7 @@ const Projects = () => {
         modules={[Navigation, Pagination]}
         navigation
         pagination={{ clickable: true }}
-        spaceBetween={50}
+        spaceBetween={0}
         slidesPerView={1}
         loop={true}
         className="carousel__swiper"
